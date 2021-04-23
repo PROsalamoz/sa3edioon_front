@@ -1,0 +1,64 @@
+
+<!-------------------- start banner section ------------------------>
+<section id="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="banner-title">FULL STACK WEB DEVELOPER WITH PYTHON</p>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus tenetur doloremque atque. Quo, molestias. Culpa iure accusamus libero, vitae tempora distinctio numquam quasi deserunt adipisci similique quis. Quam, at inventore?</p>
+        <a href="#"><i class="far fa-play-circle"></i><span>watch</span></a>
+      </div>
+
+      <div class="col-md-6 text-center">
+        <img src="assets/imges/right.svg">
+      </div>
+    </div>
+  </div>
+
+  <img id="wave" src="assets/imges/svg.png">
+
+</section>
+<!-------------------- end banner section -------------------------->
+<div class="d-flex justify-content-center pb-3">
+<!--  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed">-->
+<!--        <ul class="navbar-nav">-->
+<!--          <li class="nav-item" *ngFor="let category of categories">-->
+<!--            <button class="btn text-white" (click)="CategoryID=category.id">{{category.name}}</button>-->
+<!--          </li>-->
+<!--        </ul>-->
+    <button class="btn btn-primary" (click)="CategoryID=0">All</button>
+    <div class="btn-group">
+      <button *ngFor="let category of categories" (click)="CategoryID=category.id" type="button" class="btn btn-primary">{{category.name}}</button>
+    </div>
+<!--  <span class="lead">Categories</span>-->
+
+  <!--  </nav>-->
+</div>
+
+
+<app-main [CategoryID]="CategoryID" [all_shops]="AllShops"></app-main>
+
+<!-------------------- start services section -------------------------->
+<!--<section id="about-us">-->
+<!--  <div class="container">-->
+<!--    <h2 class="text-center title">Why choose us</h2>-->
+<!--    <div class="row">-->
+<!--      <div class="col-md-6 about-us">-->
+<!--        <h2 class="about-title">Blieves</h2>-->
+<!--        <ul class="lead">-->
+<!--          <li>Lorem ipsum dolor sit amet consectetur, adipisicing</li>-->
+<!--          <li>facilis quam distinctio expedita doloribus veritatis</li>-->
+<!--          <li> Maiores dolorum temporibus laudantium odio sequi</li>-->
+<!--          <li>quae temporibus nisi quisquam veritatis doloribus</li>-->
+<!--          <li>Excepturi obcaecati Eius nobis ipsum dolor sit amet</li>-->
+<!--          <li>Maiores dolorum temporibus laudantium odio sequi</li>-->
+<!--        </ul>-->
+<!--      </div>-->
+
+<!--      <div class="col-md-6 about-us">-->
+<!--        <img class="img-fluid lab" src="assets/imges/test4.png">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!-------------------- end services section -------------------------->
