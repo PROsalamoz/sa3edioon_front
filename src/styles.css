@@ -1,1 +1,108 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    padding: 0;
+    margin: 0;
+  }
+  /*-----------------------start of navbar--------------------------------*/
+  #my-nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  .navbar{
+    background-image: linear-gradient(to right,rgb(175, 43, 43),rgb(95, 3, 3));
+    padding: 0 !important;
+  }
+  .navbar-brand img{
+    height: 60px;
+    padding-left: 15px;
+  }
+  .navbar-nav li{
+    padding: 0 10px;
+  }
+  .navbar-nav li a{
+    color: #fff !important;
+    font-weight: 500;
+    float: right;
+  }
+  .fa-bars{
+    color: #fff;
+    font-size: 30px;
+  }
+  .navbar-toggler{
+    border: none !important;
+  }
+  /*-----------------------end of navbar--------------------------------*/
+  
+  
+  
+  /*-----------------------start of banner--------------------------------*/
+  #banner{
+    background-image: linear-gradient(to right,rgb(175, 43, 43),rgb(95, 3, 3));
+    padding-top: 5%;
+  }
+  #banner .container .banner-title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 2.5em;
+    color: #fff;
+  }
+  
+  #banner .container .fa-play-circle{
+    font-size: 45px;
+    /* margin: 0 20px 10px 0; */
+    margin: 20px;
+  }
+  #banner .container a{
+    text-decoration: none;
+    color: #fff;
+  }
+  #banner .container a span{
+  
+  }
+  #wave{
+    width: 100%;
+  }
+  /*-----------------------end of banner--------------------------------*/
+  
+  
+  /*-----------------------start of about us--------------------------------*/
+  .about-us{
+    background: #f8f9fa;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  /*.about-us .container{*/
+  /*  !*max-height: 500px;*!*/
+  /*}*/
+  
+  .about-us .about-title{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 8%;
+    text-align: center;
+  }
+  .about-us ul{
+    margin-left: 20px;
+  }
+  .about-us ul li{
+    margin: 10px 15px;
+    /*list-style: none;*/
+  }
+  
+  .about-us .lab{
+    /*width: 300px;*/
+    height: 400px;
+    width: 100%;
+  }
+  
+  
+  .about-us .bg{
+    background-image: linear-gradient(to left,rgb(175, 43, 43),rgb(95, 3, 3));
+    color: white;
+  }
+  /*-----------------------end of about us--------------------------------*/
+
