@@ -1,0 +1,225 @@
+
+<section class="about-us" *ngIf="!isFilterByCat">
+  <div class="container">
+    <h2 class="text-center title">All Shops</h2>
+    <div *ngFor="let shop of shops">
+      <div class="row">
+        <div class="col-md-6 about-us bg">
+          <h2 class="about-title">{{shop.name}}</h2>
+          <ul class="lead">
+            <li>{{shop.address}}</li>
+            <li>category {{shop.category}}</li>
+            <li> {{shop.phone}}</li>
+            <li>quae temporibus nisi quisquam veritatis doloribus</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 about-us">
+          <img class="img-fluid lab mr-5" src="assets/imges/shop_GvlIUCg.jpg">
+        </div>
+      </div>
+      <hr><br>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="about-us">
+  <div class="container" *ngIf="isFilterByCat">
+    <h2 class="text-center title">All Shops</h2>
+    <div *ngFor="let shop of filterShops">
+      <div class="row">
+        <div class="col-md-6 about-us bg">
+          <h2 class="about-title">{{shop.name}}</h2>
+          <ul class="lead">
+            <li>{{shop.address}}</li>
+            <li>{{shop.category}}</li>
+            <li> {{shop.phone}}</li>
+            <li>quae temporibus nisi quisquam veritatis doloribus</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 about-us">
+          <img class="img-fluid lab" src="assets/imges/test4.png">
+        </div>
+      </div>
+      <hr><br>
+    </div>
+
+  </div>
+</section>
+
+<!--<section class="about-us">-->
+<!--  <div class="container" *ngIf="!isFilterByCat">-->
+<!--    <h2 class="text-center title">All Shops</h2>-->
+<!--    <div *ngFor="let shop of shops">-->
+<!--      <div class="row">-->
+<!--        <div class="col-md-6 about-us bg-info">-->
+<!--          <h2 class="about-title">{{shop.name}}</h2>-->
+<!--          <ul class="lead">-->
+<!--            <li>{{shop.address}}</li>-->
+<!--            <li>{{shop.category}}</li>-->
+<!--            <li> {{shop.phone}}</li>-->
+<!--            <li>quae temporibus nisi quisquam veritatis doloribus</li>-->
+<!--          </ul>-->
+<!--        </div>-->
+
+<!--        <div class="col-md-6 about-us">-->
+<!--          <img class="img-fluid lab" src="assets/imges/test4.png">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <hr><br>-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--</section>-->
+
+
+
+
+
+
+<!--<div class="row" *ngIf="!isFilterByCat">-->
+<!--  <div class="page-content page-container col-4" id="page-content" *ngFor="let shop of shops">-->
+<!--  <div>-->
+<!--    <div class="row container d-flex justify-content-center">-->
+<!--      <div>-->
+<!--        <div class="box box-widget widget-user">-->
+<!--          <div class="widget-user-header bg-aqua-active">-->
+<!--            <h3 class="widget-user-username">{{shop.name}}</h3>-->
+<!--            <h5 class="widget-user-desc">{{shop.address}}</h5>-->
+<!--          </div>-->
+<!--          <div class="widget-user-image"> <img class="img-circle" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="User Avatar"> </div>-->
+<!--          <div class="box-footer">-->
+<!--            <div class="row">-->
+<!--              <div class="col-sm-4 border-right">-->
+<!--                <div class="description-block">-->
+<!--                  <h5 class="description-header">3,200</h5> <span class="description-text">{{shop.phone}}</span>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="col-sm-4 border-right">-->
+<!--                <div class="description-block">-->
+<!--                  <h5 class="description-header">13,000</h5> <span class="description-text">FOLLOWERS</span>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="col-sm-4">-->
+<!--                <div class="description-block">-->
+<!--                  <h5 class="description-header">35</h5> <span class="description-text">PRODUCTS</span>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+
+
+
+<!--  <div class="row" *ngIf="isFilterByCat">-->
+<!--    <div class="page-content2 page-container col-4" id="page-content2" *ngFor="let shop of filterShops">-->
+<!--      <div>-->
+<!--        <div class="row container d-flex justify-content-center">-->
+<!--          <div>-->
+<!--            <div class="box box-widget widget-user">-->
+<!--              <div class="widget-user-header bg-aqua-active">-->
+<!--                <h3 class="widget-user-username">{{shop.name}}</h3>-->
+<!--                <h5 class="widget-user-desc">{{shop.address}}</h5>-->
+<!--              </div>-->
+<!--              <div class="widget-user-image"> <img class="img-circle" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="User Avatar"> </div>-->
+<!--              <div class="box-footer">-->
+<!--                <div class="row">-->
+<!--                  <div class="col-sm-4 border-right">-->
+<!--                    <div class="description-block">-->
+<!--                      <h5 class="description-header">3,200</h5> <span class="description-text">{{shop.phone}}</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="col-sm-4 border-right">-->
+<!--                    <div class="description-block">-->
+<!--                      <h5 class="description-header">13,000</h5> <span class="description-text">FOLLOWERS</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="col-sm-4">-->
+<!--                    <div class="description-block">-->
+<!--                      <h5 class="description-header">35</h5> <span class="description-text">PRODUCTS</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+
+
+
+
+<!--  <div class="row" *ngIf="isFilter && !isFilterByCat">-->
+<!--    <div class="page-content3 page-container col-4" id="page-content3" *ngFor="let shop of all_shops">-->
+<!--      <div>-->
+<!--        <div class="row container d-flex justify-content-center">-->
+<!--          <div>-->
+<!--            <div class="box box-widget widget-user">-->
+<!--              <div class="widget-user-header bg-aqua-active">-->
+<!--                <h3 class="widget-user-username">{{shop.name}}</h3>-->
+<!--                <h5 class="widget-user-desc">{{shop.address}}</h5>-->
+<!--              </div>-->
+<!--              <div class="widget-user-image"> <img class="img-circle" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="User Avatar"> </div>-->
+<!--              <div class="box-footer">-->
+<!--                <div class="row">-->
+<!--                  <div class="col-sm-4 border-right">-->
+<!--                    <div class="description-block">-->
+<!--                      <h5 class="description-header">3,200</h5> <span class="description-text">{{shop.phone}}</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="col-sm-4 border-right">-->
+<!--                    <div class="description-block">-->
+<!--                      <h5 class="description-header">13,000</h5> <span class="description-text">FOLLOWERS</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="col-sm-4">-->
+<!--                    <div class="description-block">-->
+<!--                      <h5 class="description-header">35</h5> <span class="description-text">PRODUCTS</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+
+
+<!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; start services section &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--<section id="services">-->
+<!--  <div class="container text-center">-->
+<!--    <h2 class="title">All Shops</h2>-->
+<!--    <div class="row text-center" *ngIf="!isFilterByCat">-->
+
+<!--      <div class="col-md-4 services" *ngFor="let shop of shops">-->
+<!--        <img src="assets/imges/service1.svg">-->
+<!--        <h4>{{shop.name}}</h4>-->
+<!--        <p class="lead">{{shop.address}}</p>-->
+<!--      </div>-->
+
+<!--    </div>-->
+<!--    <button id="btn" class="btn btn-primary"><a>more</a></button>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; end services section &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+
+
+<!-------------------- end services section -------------------------->
