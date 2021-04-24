@@ -1,9 +1,9 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
-import {Ishops} from '../../../../interfaces/ishops';
-import {ShopservicesService} from '../../../../services/shopservices.service';
+import {Ishops} from '../../../interfaces/ishops';
+import {ShopservicesService} from '../../../services/shopservices.service';
 import {Observable} from 'rxjs';
-import {Category} from '../../../../interfaces/category';
-import {CategoryService} from '../../../../services/category.service';
+import {Category} from '../../../interfaces/category';
+import {CategoryService} from '../../../services/category.service';
 
 @Component({
   selector: 'app-main',
