@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {Category} from '../../../interfaces/category';
+import {Category} from '../../interfaces/category';
 import {Observable} from 'rxjs';
-import {ShopservicesService} from '../../../services/shopservices.service';
-import {CategoryService} from '../../../services/category.service';
-import {Ishops} from '../../../interfaces/ishops';
+import {ShopservicesService} from '../../services/shopservices.service';
+import {CategoryService} from '../../services/category.service';
+import {Ishops} from '../../interfaces/ishops';
 import {MainComponent} from './main/main.component';
 import {main} from '@angular/compiler-cli/src/main';
 
