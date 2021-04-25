@@ -15,6 +15,10 @@ import { LoginStatusComponent } from './components/Authentication/login-status/l
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddEditshopComponent } from './components/shops/add-editshop/add-editshop.component';
 import { ShowshopComponent } from './components/shops/showshop/showshop.component';
+import { AddEditcategoryComponent } from './components/category/add-editcategory/add-editcategory.component';
+import { ShowcategoryComponent } from './components/category/showcategory/showcategory.component';
+import { ShopsComponent } from './components/shops/shops/shops.component';
+import { CategoryComponent } from './components/category/category/category.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,10 @@ import { ShowshopComponent } from './components/shops/showshop/showshop.componen
     LoginStatusComponent,
     AddEditshopComponent,
     ShowshopComponent,
+    AddEditcategoryComponent,
+    ShowcategoryComponent,
+    ShopsComponent,
+    CategoryComponent,
   ],
   imports: [
     BrowserModule,
