@@ -13,6 +13,8 @@ import { LoginComponent } from './components/Authentication/login/login.componen
 import { RegisterComponent } from './components/Authentication/register/register.component';
 import { LoginStatusComponent } from './components/Authentication/login-status/login-status.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddEditshopComponent } from './components/shops/add-editshop/add-editshop.component';
+import { ShowshopComponent } from './components/shops/showshop/showshop.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     LoginStatusComponent,
+    AddEditshopComponent,
+    ShowshopComponent,
   ],
   imports: [
     BrowserModule,

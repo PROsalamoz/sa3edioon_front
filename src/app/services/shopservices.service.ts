@@ -39,7 +39,9 @@ export class ShopservicesService {
   UploadPhoto(val:any){
     return this.http.post(this.APIUrl+'/SaveFile',val);
   }
-
+  getShopList():Observable<any[]>{
+    return this.http.get<any[]>(this.APIUrl + '/shops/');
+  }
 }
 
 

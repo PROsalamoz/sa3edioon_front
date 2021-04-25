@@ -1,5 +1,5 @@
 export interface Ishops {
-  id: number;
+ ShopId: number;
   name: string;
   address: string;
   phone: number;
