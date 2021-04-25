@@ -19,6 +19,7 @@ import { AddEditcategoryComponent } from './components/category/add-editcategory
 import { ShowcategoryComponent } from './components/category/showcategory/showcategory.component';
 import { ShopsComponent } from './components/shops/shops/shops.component';
 import { CategoryComponent } from './components/category/category/category.component';
+import { SubcategoryComponent } from './components/subcategory/subcategory/subcategory.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { CategoryComponent } from './components/category/category/category.compo
     ShowcategoryComponent,
     ShopsComponent,
     CategoryComponent,
+    SubcategoryComponent,
   ],
   imports: [
     BrowserModule,
