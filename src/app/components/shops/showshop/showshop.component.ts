@@ -40,7 +40,7 @@ export class ShowshopComponent implements OnInit {
 
   deleteClick(item){
     if(confirm('Are you sure??')){
-      this.Ser.deleteShop(item.SubCategoryId).subscribe(data=>{
+      this.Ser.deleteShop(item.ShopId).subscribe(data=>{
         alert(data.toString());
         this.refreshShopList();
       })
