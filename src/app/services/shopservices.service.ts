@@ -9,6 +9,8 @@ import {Observable} from 'rxjs';
 export class ShopservicesService {
  url = 'http://127.0.0.1:8000/shops/all_shops';
   // tslint:disable-next-line:variable-name
+  readonly APIUrl = "http://127.0.0.1:8000";
+  readonly PhotoUrl = "http://127.0.0.1:8000/media/";
   constructor(private http: HttpClient) {}
   // tslint:disable-next-line:typedef
   get_all_shops(): Observable<Ishops[]>{
@@ -23,7 +25,23 @@ export class ShopservicesService {
   //     return productObj.categoryid == catID;
   //   });
   // }
+  addShop(val:any){
+    return this.http.post(this.APIUrl + '/shops/',val);
+  }
 
+  updateShop(val:any){
+    return this.http.put(this.APIUrl + '/shops/',val);
+  }
+
+  deleteShop(val:any){
+    return this.http.delete(this.APIUrl + '/shops/'+val);
+  }
+  UploadPhoto(val:any){
+    return this.http.post(this.APIUrl+'/SaveFile',val);
+  }
+  getShopList():Observable<any[]>{
+    return this.http.get<any[]>(this.APIUrl + '/shops/');
+  }
 }
 
 

@@ -13,6 +13,17 @@ import { LoginComponent } from './components/Authentication/login/login.componen
 import { RegisterComponent } from './components/Authentication/register/register.component';
 import { LoginStatusComponent } from './components/Authentication/login-status/login-status.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddEditshopComponent } from './components/shops/add-editshop/add-editshop.component';
+import { ShowshopComponent } from './components/shops/showshop/showshop.component';
+import { AddEditcategoryComponent } from './components/category/add-editcategory/add-editcategory.component';
+import { ShowcategoryComponent } from './components/category/showcategory/showcategory.component';
+import { ShopsComponent } from './components/shops/shops/shops.component';
+import { CategoryComponent } from './components/category/category/category.component';
+import { SubcategoryComponent } from './components/subcategory/subcategory/subcategory.component';
+import { AddEditsubcategoryComponent } from './components/subcategory/add-editsubcategory/add-editsubcategory.component';
+import { ShowsubcategoryComponent } from './components/subcategory/showsubcategory/showsubcategory.component';
+import { AddEditdeliverypersonComponent } from './components/deliveryperson/add-editdeliveryperson/add-editdeliveryperson.component';
+import { ShowdeliverypersonComponent } from './components/deliveryperson/showdeliveryperson/showdeliveryperson.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +37,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     LoginStatusComponent,
+    AddEditshopComponent,
+    ShowshopComponent,
+    AddEditcategoryComponent,
+    ShowcategoryComponent,
+    ShopsComponent,
+    CategoryComponent,
+    SubcategoryComponent,
+    AddEditsubcategoryComponent,
+    ShowsubcategoryComponent,
+    AddEditdeliverypersonComponent,
+    ShowdeliverypersonComponent,
   ],
   imports: [
     BrowserModule,
