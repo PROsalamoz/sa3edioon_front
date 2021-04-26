@@ -20,6 +20,10 @@ import { ShowcategoryComponent } from './components/category/showcategory/showca
 import { ShopsComponent } from './components/shops/shops/shops.component';
 import { CategoryComponent } from './components/category/category/category.component';
 import { SubcategoryComponent } from './components/subcategory/subcategory/subcategory.component';
+import { AddEditsubcategoryComponent } from './components/subcategory/add-editsubcategory/add-editsubcategory.component';
+import { ShowsubcategoryComponent } from './components/subcategory/showsubcategory/showsubcategory.component';
+import { AddEditdeliverypersonComponent } from './components/deliveryperson/add-editdeliveryperson/add-editdeliveryperson.component';
+import { ShowdeliverypersonComponent } from './components/deliveryperson/showdeliveryperson/showdeliveryperson.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +44,10 @@ import { SubcategoryComponent } from './components/subcategory/subcategory/subca
     ShopsComponent,
     CategoryComponent,
     SubcategoryComponent,
+    AddEditsubcategoryComponent,
+    ShowsubcategoryComponent,
+    AddEditdeliverypersonComponent,
+    ShowdeliverypersonComponent,
   ],
   imports: [
     BrowserModule,

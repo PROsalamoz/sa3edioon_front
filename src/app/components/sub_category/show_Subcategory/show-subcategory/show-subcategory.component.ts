@@ -1,22 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { SubcategoryService } from 'src/app/services/subcategory.service';
+import { SharedserviceService } from 'src/app/sharedservice.service';
+import { SubCategryService } from 'src/app/shared_services/sub-categry.service';
+
 
 @Component({
-  selector: 'app-showsubcategory',
-  templateUrl: './showsubcategory.component.html',
-  styleUrls: ['./showsubcategory.component.css']
+  selector: 'app-show-subcategory',
+  templateUrl: './show-subcategory.component.html',
+  styleUrls: ['./show-subcategory.component.css']
 })
-export class ShowsubcategoryComponent implements OnInit {
+export class ShowSubcategoryComponent implements OnInit {
 
-  constructor(private Ser:SubcategoryService) { }
+  constructor( private Ser:SubCategryService) { }
+
+  
   SubCategoryList:any=[];
 
   ModalTitle:string;
   ActivateAddEditSubCatComp:boolean=false;
   subcat:any;
+
   ngOnInit(): void {
     this.refreshSubCatList();
   }
+
   addClick(){
     this.subcat={
       SubCategoryId:0,
