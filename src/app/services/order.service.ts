@@ -9,19 +9,19 @@ export class OrderService {
   readonly APIUrl = "http://127.0.0.1:8000";
   readonly PhotoUrl = "http://127.0.0.1:8000/media/";
   constructor(private http:HttpClient) { }
-  getDeliveryPersonList():Observable<any[]>{
+  getOrderList():Observable<any[]>{
     return this.http.get<any[]>(this.APIUrl + '/order/');
   }
 
-  addDeliveryPerson(val:any){
+  addorder(val:any){
     return this.http.post(this.APIUrl + '/order/',val);
   }
 
-  updateDeliveryPerson(val:any){
+  updateorder(val:any){
     return this.http.put(this.APIUrl + '/order/',val);
   }
 
-  deleteDeliveryPerson(val:any){
+  deleteorder(val:any){
     return this.http.delete(this.APIUrl + '/order/'+val);
   }
 
