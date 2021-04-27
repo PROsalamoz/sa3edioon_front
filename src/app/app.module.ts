@@ -25,6 +25,7 @@ import { AddEditsubcategoryComponent } from './components/subcategory/add-editsu
 import { ShowsubcategoryComponent } from './components/subcategory/showsubcategory/showsubcategory.component';
 import { AddEditdeliverypersonComponent } from './components/deliveryperson/add-editdeliveryperson/add-editdeliveryperson.component';
 import { ShowdeliverypersonComponent } from './components/deliveryperson/showdeliveryperson/showdeliveryperson.component';
+import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { ShowdeliverypersonComponent } from './components/deliveryperson/showdel
     CategoryComponent,
     SubcategoryComponent,
     CartStatusComponent,
+    CartDetailsComponent,
     AddEditsubcategoryComponent,
     ShowsubcategoryComponent,
     AddEditdeliverypersonComponent,

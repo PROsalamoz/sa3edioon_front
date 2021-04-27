@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/Authentication/login/login.component';
 import { RegisterComponent } from './components/Authentication/register/register.component';
+import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 import { ContentComponent } from './components/content/content.component';
 import { ApiProductDetailsComponent } from './components/products/api-product-details/api-product-details.component';
 import { ApiProductsComponent } from './components/products/api-products/api-products.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'ApiProduct/:id',component:ApiProductDetailsComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'sub_category', component: SubcategoryComponent},
+  {path: 'cart-details', component: CartDetailsComponent},
   { path: 'login', component: LoginComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
 ];
