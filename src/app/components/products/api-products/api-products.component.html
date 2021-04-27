@@ -45,7 +45,7 @@
                         </ul>
                         <h3 class="title"><a [routerLink]="['/ApiProduct',item.id]">{{item.Title}}</a></h3>
                         <div class="price"><span>$90.00</span>{{item.price | currency:"USD"}}</div>
-                        <a class="add-to-cart" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i>أضف الى العربه</a>
+                        <a (click)="addToCart(item)" class="add-to-cart" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i>أضف الى العربه</a>
                         
                     </div>
                 </div>
