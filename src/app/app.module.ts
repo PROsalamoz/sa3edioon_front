@@ -1,3 +1,4 @@
+import { CartStatusComponent } from './components/cart-status/cart-status.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -44,6 +45,7 @@ import { ShowdeliverypersonComponent } from './components/deliveryperson/showdel
     ShopsComponent,
     CategoryComponent,
     SubcategoryComponent,
+    CartStatusComponent,
     AddEditsubcategoryComponent,
     ShowsubcategoryComponent,
     AddEditdeliverypersonComponent,

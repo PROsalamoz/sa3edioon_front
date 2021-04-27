@@ -16,6 +16,6 @@ export class ApiProductService {
   }
 
   getProductByID(pid:number):Observable<ApiIproduct>{
-    return this._http.get<ApiIproduct>(`http://127.0.0.1:8000/products/all_products/`);
+    return this._http.get<ApiIproduct>(`http://127.0.0.1:8000/products/all_products/${pid}`);
   }
 }
