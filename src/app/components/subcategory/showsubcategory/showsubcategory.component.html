@@ -1,1 +1,4 @@
-<p>showsubcategory works!</p>
+<div *ngFor="let sub of SubCategoryList" class="bg-info">
+  <h1><a routerLink="/ApiProducts">{{sub.name}}</a></h1>
+  <p>{{sub.id}}</p>
+</div>

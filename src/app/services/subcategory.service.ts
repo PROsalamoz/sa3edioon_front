@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SubcategoryService {
-  readonly APIUrl = "http://127.0.0.1:8000";
+  readonly APIUrl = "http://127.0.0.1:8000/shops";
   readonly PhotoUrl = "http://127.0.0.1:8000/media/";
   constructor(private http:HttpClient) { }
   getSubCategoryList():Observable<any[]>{

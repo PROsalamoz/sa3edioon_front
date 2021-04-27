@@ -55,6 +55,8 @@ export class ShowsubcategoryComponent implements OnInit {
   refreshSubCatList(){
     this.Ser.getSubCategoryList().subscribe(data=>{
       this.SubCategoryList=data;
+      console.log(this.SubCategoryList);
+
     });
   }
 }

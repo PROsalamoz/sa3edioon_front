@@ -5,7 +5,7 @@
     <div *ngFor="let shop of shops">
       <div class="row">
         <div class="col-md-6 about-us bg">
-          <h2 class="about-title">{{shop.name}}</h2>
+          <h2 class="about-title"><a routerLink="/sub_category">{{shop.name}}</a></h2>
           <ul class="lead">
             <li>{{shop.address}}</li>
             <li>category {{shop.category}}</li>
