@@ -24,6 +24,9 @@ import { AddEditsubcategoryComponent } from './components/subcategory/add-editsu
 import { ShowsubcategoryComponent } from './components/subcategory/showsubcategory/showsubcategory.component';
 import { AddEditdeliverypersonComponent } from './components/deliveryperson/add-editdeliveryperson/add-editdeliveryperson.component';
 import { ShowdeliverypersonComponent } from './components/deliveryperson/showdeliveryperson/showdeliveryperson.component';
+import { AddProductComponent } from './components/products/add-product/add-product.component';
+import { TestimonialComponent } from './components/testimonial/testimonial.component';
+// import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -48,6 +51,8 @@ import { ShowdeliverypersonComponent } from './components/deliveryperson/showdel
     ShowsubcategoryComponent,
     AddEditdeliverypersonComponent,
     ShowdeliverypersonComponent,
+    AddProductComponent,
+    TestimonialComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +60,7 @@ import { ShowdeliverypersonComponent } from './components/deliveryperson/showdel
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    // AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

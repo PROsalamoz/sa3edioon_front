@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ApiIproduct } from 'src/app/interfaces/api-iproduct';
@@ -13,11 +14,13 @@ export class ApiProductDetailsComponent implements OnInit {
   constructor(private _apiPrdServ:ApiProductService,private _activedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
-   let id=this._activedRoute.snapshot.params["id"];
-    this._apiPrdServ.getProductByID(id).subscribe((res)=>{
-       this.prd=res;
-       console.log(this.prd);
+  
+    let id=this._activedRoute.snapshot.params["id"];
+    this._apiPrdServ.viewProduct(id).subscribe((res)=>{
+      this.prd=res;
+      console.log(this.prd);
     })
-  }
 
+  }
+ 
 }
