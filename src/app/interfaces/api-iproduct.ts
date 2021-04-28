@@ -1,9 +1,11 @@
-export interface ApiIproduct {  
-      id: number,
-        Title: string,
-        price: number,
-        description: string,
-        slug: string,
-        img: string,
-        stock: string
+export interface ApiIproduct {
+  ProductId: number,
+  Title: string,
+  price: number,
+  description: string,
+  discount: number,
+  slug: string,
+  img: string,
+  stock: string,
+  // subcategory: number,
 }

@@ -1,38 +1,134 @@
-<!---------------------- start navbar section -------------------------->
-<section id="my-nav-bar">
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#"><img src="assets/imges/logo2.svg"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+<!-------------------- start navbar section -------------------------->
+
+<!--header section start -->
+<div class="header_section">
+
+
+   <!-- Navbar -->
+   <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+      <div class="container">
+
+         <!-- Brand -->
+         <a class="navbar-brand">
+            <strong>Shopy</strong>
+         </a>
+
+         <!-- Collapse -->
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/home">HOME</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#services">SERVISES</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about-us">ABOUT US</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#testomnials">TESTEMONIALS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#footer">CONTACT</a>
-        </li>
-      </ul>
+            <span class="navbar-toggler-icon"></span>
+         </button>
 
-      <app-login-status></app-login-status>
-     <app-cart-status></app-cart-status>
-    </div>
-    <!-- <form class="form-inline my-2 my-lg-0">
-<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-</form> -->
+         <!-- Links -->
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-  </nav>
-</section>
-<!-------------------- end navbar section -------------------------->
+            <!-- Left -->
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                  <a class="nav-link" [routerLink]="['/Home']" routerLinkActive="activeLink">Home
+                     <span class="sr-only">(current)</span>
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/category']">category</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/ApiProducts']">Products</a>
+               </li>
+
+            </ul>
+
+            <!-- Right -->
+            <ul class="navbar-nav nav-flex-icons">
+               <li class="nav-item">
+                  <app-login-status></app-login-status>
+
+               </li>
+               <li class="nav-item">
+                  <app-cart-status></app-cart-status>
+               </li>
+
+            </ul>
+
+
+         </div>
+
+      </div>
+   </nav>
+   <!-- Navbar -->
+
+
+
+   <!--banner section start -->
+   <div class="banner_section layout_padding">
+      <div id="my_slider" class="carousel slide" data-ride="carousel">
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="taital_main">
+                           <h4 class="banner_taital"><span class="font_size_90">50%</span> Discount Online Shop</h4>
+                           <p class="banner_text">There are many variations of passages of Lorem Ipsum available, but
+                              the majority have suffered alteration </p>
+                           <div class="book_bt"><a href="#">Shop Now</a></div>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div><img src="./../../../../assets/images/img-1.png" class="image_1"></div>
+                     </div>
+                  </div>
+                  <div class="button_main"><button class="all_text">All</button><input type="text" class="Enter_text"
+                        placeholder="Enter keywords" name=""><button class="search_text">Search</button></div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="taital_main">
+                           <h4 class="banner_taital"><span class="font_size_90">50%</span> Discount Online Shop</h4>
+                           <p class="banner_text">There are many variations of passages of Lorem Ipsum available, but
+                              the majority have suffered alteration </p>
+                           <div class="book_bt"><a href="#">Shop Now</a></div>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div><img src="./../../../../assets/images/img-1.png" class="image_1"></div>
+                     </div>
+                  </div>
+                  <div class="button_main"><button class="all_text">All</button><input type="text" class="Enter_text"
+                        placeholder="Enter keywords" name=""><button class="search_text">Search</button></div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="taital_main">
+                           <h4 class="banner_taital"><span class="font_size_90">50%</span> Discount Online Shop</h4>
+                           <p class="banner_text">There are many variations of passages of Lorem Ipsum available, but
+                              the majority have suffered alteration </p>
+                           <div class="book_bt"><a href="#">Shop Now</a></div>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div><img src="./../../../../assets/images/img-1.png" class="image_1"></div>
+                     </div>
+                  </div>
+                  <div class="button_main"><button class="all_text">All</button><input type="text" class="Enter_text"
+                        placeholder="Enter keywords" name=""><button class="search_text">Search</button></div>
+               </div>
+            </div>
+         </div>
+         <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+            <i class=""><img src="./../../../../assets/images/left-icon.png"></i>
+         </a>
+         <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+            <i class=""><img src="./../../../../assets/images/right-icon.png"></i>
+         </a>
+      </div>
+   </div>
+   <!--banner section end -->
+</div>
+<!--header section end -->

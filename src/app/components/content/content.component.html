@@ -3,21 +3,21 @@
 <section id="banner">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <!-- <div class="col-md-6">
         <p class="banner-title">FULL STACK WEB DEVELOPER WITH PYTHON</p>
         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus tenetur doloremque atque. Quo, molestias. Culpa iure accusamus libero, vitae tempora distinctio numquam quasi deserunt adipisci similique quis. Quam, at inventore?</p>
         <a href="#"><i class="far fa-play-circle"></i><span>watch</span></a>
-      </div>
+      </div> -->
 
-      <div class="col-md-6 text-center">
+      <!-- <div class="col-md-6 text-center">
         <img src="assets/imges/right.svg">
-      </div>
+      </div> -->
     </div>
   </div>
 
-  <img id="wave" src="assets/imges/svg.png">
+  <!-- <img id="wave" src="assets/imges/svg.png"> -->
 
-</section>
+<!-- </section> -->
 <!-------------------- end banner section -------------------------->
 <div class="d-flex justify-content-center pb-3">
 <!--  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed">-->
@@ -26,14 +26,21 @@
 <!--            <button class="btn text-white" (click)="CategoryID=category.id">{{category.name}}</button>-->
 <!--          </li>-->
 <!--        </ul>-->
-    <button class="btn btn-primary" (click)="CategoryID=0">All</button>
-    <div class="btn-group">
-      <button *ngFor="let category of categories" (click)="CategoryID=category.id" type="button" class="btn btn-primary">{{category.name}}</button>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" (click)="CategoryID=0" role="tab" aria-controls="home" aria-selected="true"><b>All</b></a>
+  </li>
+    <!-- <button class="btn btn-primary" (click)="CategoryID=0">All</button> -->
+    <!-- <div class="btn-group"> -->
+      <li class="nav-item" *ngFor="let category of categories">
+        <a class="nav-link" id="profile-tab" data-toggle="tab"  (click)="CategoryID=category.id" role="tab" aria-controls="profile" aria-selected="false"><b>{{category.name}}</b></a>
+      </li>
+      </ul>
+      <!-- <button *ngFor="let category of categories" (click)="CategoryID=category.id" type="button" class="btn btn-primary">{{category.name}}</button> -->
     </div>
 <!--  <span class="lead">Categories</span>-->
 
   <!--  </nav>-->
-</div>
 
 
 <app-main [CategoryID]="CategoryID" [all_shops]="AllShops"></app-main>
