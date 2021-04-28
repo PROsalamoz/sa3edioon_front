@@ -1,20 +1,4 @@
-<!-- <div class='container-fluid'>
-  <div class="row">
-    <div class="col-sm-6 d-flex justify-content-center">
-  <div class="card mt-5" *ngFor="let item of shops" style="width: 20rem;"><img class='mx-auto img-thumbnail' src="https://i.imgur.com/pjITBzX.jpg" width="auto" height="auto"/>
-    <div class="card-body text-center mx-auto">
-      <div class='cvp'>
-        <h5 class="card-title font-weight-bold">{{item.Title}}</h5>
-       <p class="card-text">asasa</p><a href="#" class="btn details px-auto">view details</a><br/> <a href="#" class="btn cart px-auto">ADD TO CART</a>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-  -->
-
-  <div class="demo">
+<div class="demo">
     <div class="container">
         <div class="row text-center">
             <h1 class="white">صفحة المنتجات</h1>
@@ -25,7 +9,7 @@
                 <div class="product-grid" >
                     <div class="product-image">
                         <a href="#" class="image">
-                            <img class="pic-1" src="./../../../assets/images/pic1.jpg">
+                            <img class="pic-1" src="{{item.img}}">
                             <!-- <a class="btn btn-warning" [routerLink]="['/ApiProduct',item.id]" style="color: white;"><b>Show</b></a> -->
                         </a>
                         <span class="product-discount-label">-33%</span>
@@ -46,7 +30,7 @@
                         <h3 class="title"><a [routerLink]="['/ApiProduct',item.id]">{{item.Title}}</a></h3>
                         <div class="price"><span>$90.00</span>{{item.price | currency:"USD"}}</div>
                         <a (click)="addToCart(item)" class="add-to-cart" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i>أضف الى العربه</a>
-                        
+
                     </div>
                 </div>
                 <br>
