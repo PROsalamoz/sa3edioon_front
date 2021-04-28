@@ -1,0 +1,25 @@
+body {margin:2rem;}
+
+.tab-pane {
+  padding:2rem 0;
+}
+
+.nav-link {
+    background: #faf8f8;
+}
+.nav-link.active {
+  font-weight: bold;
+  background:#fff;
+}
+li{
+    cursor: pointer;
+}
+.nav-link {
+    display: block;
+    padding: .8rem 4rem;
+}
+a{
+    font-weight: bold;
+    background:#fff;
+    color: black;
+}
