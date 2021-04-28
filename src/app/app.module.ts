@@ -28,7 +28,7 @@ import { ShowdeliverypersonComponent } from './components/deliveryperson/showdel
 import { AddProductComponent } from './components/products/add-product/add-product.component';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { BrandComponent } from './components/brand/brand.component';
-// import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +50,7 @@ import { BrandComponent } from './components/brand/brand.component';
     CategoryComponent,
     SubcategoryComponent,
     CartStatusComponent,
+    CartDetailsComponent,
     AddEditsubcategoryComponent,
     ShowsubcategoryComponent,
     AddEditdeliverypersonComponent,
