@@ -1,14 +1,15 @@
 .security-btn{
-  background-image: linear-gradient(to right,#b12b2b,#5f0303);
+  /* background-image: linear-gradient(to right,#b12b2b,#5f0303); */
   padding: 5px 20px;
   border: none;
   margin-top: 5px;
   color: #fff;
   border-radius: 20px;
   transition :transform 0.5s;
+  background: none;
 }
 .security-btn:hover{
-  background-image: linear-gradient(to left,rgb(175, 43, 43),rgb(95, 3, 3));
+  /* background-image: linear-gradient(to left,rgb(175, 43, 43),rgb(95, 3, 3)); */
   transform: translateY(-10px);
 }
 

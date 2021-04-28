@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import {Subject} from 'rxjs';
 import {CartItem} from '../interfaces/cart-item';
+import {NavComponent} from './../components/site-layout/nav/nav.component'
+import {LoginStatusComponent} from './../components/Authentication/login-status/login-status.component'
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartServiceService {
-
+DisplayBanner:false;
   cartItems: CartItem[] = [];
 
   totalPrice: Subject<number> = new Subject<number>();

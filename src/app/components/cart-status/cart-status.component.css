@@ -11,14 +11,13 @@
 }
 
 .total{
-  background:#205b8d;
-  line-height:43px;
-  color:#fff;
-  border-radius:30px;
-  border:1px solid #0da8e4;
-  float:left;
-  margin-top:7px;
-  padding-left:17px
+  line-height: 43px;
+  color: #fff;
+  border-radius: 30px;
+  border: 1px solid #faf7f7;
+  float: left;
+  margin-top: 7px;
+  padding-left: 17px;
 }
 
 .total span{

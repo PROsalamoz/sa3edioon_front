@@ -9,6 +9,7 @@ import {HttpClient} from '@angular/common/http';
 export class LoginStatusComponent implements OnInit {
   isAuthenticated = false;
   userFullName: string;
+  DisplayBanner:true;
   // tslint:disable-next-line:variable-name
   constructor(private _http: HttpClient) { }
 
