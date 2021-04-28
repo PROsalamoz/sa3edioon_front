@@ -65,7 +65,6 @@ import { CartDetailsComponent } from './components/cart-details/cart-details.com
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    // AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
