@@ -29,10 +29,8 @@
                             <li class="fa fa-star"></li>
                         </ul>
                         <h3 class="title"><a [routerLink]="['/ApiProduct',item.ProductId]">{{item.Title}}</a></h3>
-                        <div class="price"><span>$90.00</span>{{item.price | currency:"USD"}}</div>
-                        <a (click)="addToCart(item)" class="add-to-cart" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i>أضف الى العربه</a>
-                        
-                        <a class="add-to-cart" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i>add to cart</a>
+                        <div class="price"><span></span>{{item.price | currency:"USD"}}</div>
+                        <a (click)="addToCart(item)" class="add-to-cart" data-toggle="modal" data-target="#product_view"><i class="fa fa-shopping-cart"></i>add to cart</a>
                     </div>
                 </div>
                 <br>

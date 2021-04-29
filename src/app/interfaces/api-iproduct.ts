@@ -6,6 +6,6 @@ export interface ApiIproduct {
   discount: number,
   slug: string,
   img: string,
-  stock: string,
+  stock: number,
   subCat:number;
 }

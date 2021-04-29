@@ -33,14 +33,14 @@ export class UpdateProductComponent implements OnInit {
 
   updateProduct(form){
     const updateProduct = {
-       ProductId: form.value.id,
-        Title: form.value.product_Title,
+       ProductId: form.value.ProductId,
+        Title: form.value.Title,
         price: form.value.price,
         description: form.value.description,
         discount: form.value.discount,
         slug: '',
   img: '',
-  stock:  form.value.productstock,
+  stock:  form.value.stock,
   subCat:2,
   };
     console.log(form);
