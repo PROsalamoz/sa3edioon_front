@@ -32,6 +32,7 @@ import { DeleteProductComponent } from './components/products/delete-product/del
 import { UpdateProductComponent } from './components/products/update-product/update-product.component';
 // import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
+import { SearchForProductComponent } from './components/search-for-product/search-for-product.component';
 import { FooterComponent } from './components/site-layout/footer/footer.component';
 
 @NgModule({
@@ -64,6 +65,7 @@ import { FooterComponent } from './components/site-layout/footer/footer.componen
     BrandComponent,
     UpdateProductComponent,
     DeleteProductComponent,
+    SearchForProductComponent,
     FooterComponent,
   ],
   imports: [
