@@ -10,6 +10,7 @@ import { ApiProductDetailsComponent } from './components/products/api-product-de
 import { ApiProductsComponent } from './components/products/api-products/api-products.component';
 import {SubcategoryComponent} from "./components/subcategory/subcategory/subcategory.component";
 import { UpdateProductComponent } from './components/products/update-product/update-product.component';
+import { DeleteProductComponent } from './components/products/delete-product/delete-product.component';
 
 const routes: Routes = [
   { path: 'home', component: ContentComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:'ApiProducts',component:ApiProductsComponent},
   {path:'ApiProduct/:id',component:ApiProductDetailsComponent},
   {path:'update-product/:id',component:UpdateProductComponent},
+  { path: 'delete-product/:id', component: DeleteProductComponent},
   {path:'add-product',component:AddProductComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'sub_category', component: SubcategoryComponent},
