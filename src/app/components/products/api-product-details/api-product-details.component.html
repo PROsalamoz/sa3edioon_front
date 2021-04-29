@@ -21,7 +21,8 @@
 						
 					</div>
 					<div class="details col-md-6" style="text-align: right;">
-						<h3 class="product-title"> {{prd.ProductId}} </h3>
+						<h3 class="product-title"> {{productDetails.Title}} </h3>
+						<a href="/update-product/{{productDetails.ProductId}}">Update Product</a>
 						<div class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>
@@ -32,8 +33,8 @@
 							</div>
 							<span class="review-no">41 reviews</span>
 						</div>
-						<p class="product-description">{{prd.description}} </p>
-						<h4 class="price"><span>{{prd.price}} جنيه</span></h4>
+						<p class="product-description">{{productDetails.description}} </p>
+						<h4 class="price"><span>{{productDetails.price}} جنيه</span></h4>
 						<!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
 						<h5 class="sizes">sizes:
 							<span class="size" data-toggle="tooltip" title="small">s</span>

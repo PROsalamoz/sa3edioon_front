@@ -28,6 +28,9 @@ import { ShowdeliverypersonComponent } from './components/deliveryperson/showdel
 import { AddProductComponent } from './components/products/add-product/add-product.component';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { BrandComponent } from './components/brand/brand.component';
+import { DeleteProductComponent } from './components/products/delete-product/delete-product.component';
+import { UpdateProductComponent } from './components/products/update-product/update-product.component';
+// import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 
 @NgModule({
@@ -57,7 +60,9 @@ import { CartDetailsComponent } from './components/cart-details/cart-details.com
     ShowdeliverypersonComponent,
     AddProductComponent,
     TestimonialComponent,
-    BrandComponent
+    BrandComponent,
+    UpdateProductComponent,
+    DeleteProductComponent,
   ],
   imports: [
     BrowserModule,

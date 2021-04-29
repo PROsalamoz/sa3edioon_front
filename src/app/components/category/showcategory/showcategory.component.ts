@@ -10,11 +10,14 @@ export class ShowcategoryComponent implements OnInit {
 
   constructor(private Ser:CategoryService ) { }
   CategoryList:any=[];
-
+  CategoryIdFilter:string="";
+  CategoryNameFilter:string="";
+  CategoryListWithoutFilter:any=[];
   ModalTitle:string;
   ActivateAddEditCatComp:boolean=false;
   cat:any;
   ngOnInit( ): void {
+    this.refreshCatList();
   }
   addClick(){
     this.cat={
@@ -36,7 +39,7 @@ export class ShowcategoryComponent implements OnInit {
 
   deleteClick(item){
     if(confirm('Are you sure??')){
-      this.Ser.deleteCategory(item.SubCategoryId).subscribe(data=>{
+      this.Ser.deleteCategory(item.CategoryId).subscribe(data=>{
         alert(data.toString());
         this.refreshCatList();
       })
@@ -53,5 +56,28 @@ export class ShowcategoryComponent implements OnInit {
     this.Ser.getCategoryList().subscribe(data=>{
       this.CategoryList=data;
     });
+  }
+  FilterFn(){
+    var CategoryIdFilter = this.CategoryIdFilter;
+    var CategoryNameFilter = this.CategoryNameFilter;
+
+    this.CategoryList = this.CategoryListWithoutFilter.filter(function (el){
+        return el.CategoryId.toString().toLowerCase().includes(
+          CategoryIdFilter.toString().trim().toLowerCase()
+        )&&
+        el.name.toString().toLowerCase().includes(
+          CategoryNameFilter.toString().trim().toLowerCase()
+        )
+    });
+  }
+
+  sortResult(prop,asc){
+    this.CategoryList = this.CategoryListWithoutFilter.sort(function(a,b){
+      if(asc){
+          return (a[prop]>b[prop])?1 : ((a[prop]<b[prop]) ?-1 :0);
+      }else{
+        return (b[prop]>a[prop])?1 : ((b[prop]<a[prop]) ?-1 :0);
+      }
+    })
   }
 }
