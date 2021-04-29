@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: 'open sans';
   overflow-x: hidden; }
 
@@ -158,11 +158,11 @@ img {
   100% {
     opacity: 1;
     -webkit-transform: scale(1);
-            transform: scale(1); } }
+            transform: scale(1); } } */
 
 /*# sourceMappingURL=style.css.map */
 
-
+/* 
 
 
 
@@ -214,4 +214,15 @@ body {
 
 .owl-carousel {
   margin-bottom: 15px
+} */
+
+.lead{
+  margin-bottom: 13px;
+}
+p.lead
+  {
+    /* margin: 20px; */
+    /* font-weight: 300; */
+    font-size: 15px;
+    line-height: 24px;
 }

@@ -9,17 +9,19 @@ import { ContentComponent } from './components/content/content.component';
 import { AddProductComponent } from './components/products/add-product/add-product.component';
 import { ApiProductDetailsComponent } from './components/products/api-product-details/api-product-details.component';
 import { ApiProductsComponent } from './components/products/api-products/api-products.component';
-import {SubcategoryComponent} from "./components/subcategory/subcategory/subcategory.component";
+import {SubcategoryComponent} from './components/subcategory/subcategory/subcategory.component';
 import { UpdateProductComponent } from './components/products/update-product/update-product.component';
+import { DeleteProductComponent } from './components/products/delete-product/delete-product.component';
 import { ShopsComponent } from './components/shops/shops/shops.component';
 
 const routes: Routes = [
   { path: 'home', component: ContentComponent },
-  {path: 'category',component:CategoryComponent},
-  {path:'ApiProducts',component:ApiProductsComponent},
-  {path:'ApiProduct/:id',component:ApiProductDetailsComponent},
-  {path:'update-product/:id',component:UpdateProductComponent},
-  {path:'add-product',component:AddProductComponent},
+  {path: 'category', component: CategoryComponent},
+  {path: 'ApiProducts', component: ApiProductsComponent},
+  {path: 'ApiProduct/:id', component: ApiProductDetailsComponent},
+  {path: 'update-product/:id', component: UpdateProductComponent},
+  { path: 'delete-product/:id', component: DeleteProductComponent},
+  {path: 'add-product', component: AddProductComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'sub_category', component: SubcategoryComponent},
   // {path: 'cart-details', component: CartDetailsComponent},
@@ -29,6 +31,7 @@ const routes: Routes = [
   { path: 'search/:keyword', component: ApiProductsComponent},
 ];
 
+// @ts-ignore
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

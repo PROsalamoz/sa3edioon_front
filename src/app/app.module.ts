@@ -33,6 +33,7 @@ import { UpdateProductComponent } from './components/products/update-product/upd
 // import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 import { SearchForProductComponent } from './components/search-for-product/search-for-product.component';
+import { FooterComponent } from './components/site-layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { SearchForProductComponent } from './components/search-for-product/searc
     UpdateProductComponent,
     DeleteProductComponent,
     SearchForProductComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
