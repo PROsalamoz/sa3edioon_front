@@ -1,3 +1,4 @@
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { Component, OnInit } from '@angular/core';
 import { ApiIproduct } from 'src/app/interfaces/api-iproduct';
@@ -12,16 +13,39 @@ import { CartServiceService } from 'src/app/services/cart-service.service';
 })
 export class ApiProductsComponent implements OnInit {
 ApiProducts:ApiIproduct[];
-  constructor(private _apiPrdServ:ApiProductService, private cartService: CartServiceService) { }
+searchMode: boolean;
+  constructor(private _apiPrdServ:ApiProductService, private cartService: CartServiceService, private _route: ActivatedRoute) { }
 
   ngOnInit(): void {
-   this._apiPrdServ.getAllProducts().subscribe((res)=>{
-    //  console.log(res);
-    this.ApiProducts=res;
-   },(err)=>{
-     console.log(err);
+   this.searchMode = this._route.snapshot.paramMap.has('keyword');
 
-   })
+   if(this.searchMode){
+     this.handleSearchMode();
+   }
+   else{
+    this._apiPrdServ.getAllProducts().subscribe((res)=>{
+      //  console.log(res);
+      this.ApiProducts=res;
+     },(err)=>{
+       console.log(err);
+  
+     })
+   }
+
+  }
+
+  handleSearchMode() {
+    const keyword: string = this._route.snapshot.paramMap.get('keyword');
+
+    this._apiPrdServ.searchForProduct(keyword).subscribe(
+      (data) => {
+        this.ApiProducts = data;
+      },
+      (error) => {
+        console.log(error);
+        
+      }
+    );
   }
 
   addToCart(theProduct: ApiIproduct) {
