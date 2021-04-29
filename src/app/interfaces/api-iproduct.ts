@@ -7,5 +7,5 @@ export interface ApiIproduct {
   slug: string,
   img: string,
   stock: string,
-  // subcategory: number,
+  subCat:number;
 }
