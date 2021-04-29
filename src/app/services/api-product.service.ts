@@ -29,13 +29,14 @@ export class ApiProductService {
   }
 
   updateProduct(productId, productBody): Observable<ApiIproduct>{
-    const productUrl = "http://127.0.0.1:8000/product/" + productId;
+    const productUrl = "http://127.0.0.1:8000/products/all_products/" + productId +"/";
     return this._http.put<ApiIproduct>(productUrl, productBody); // return an observable
   }
 
-  // deleteDepartment(val:any){
-  //   return this._http.delete("http://127.0.0.1:8000/product/"+val);
-  // }
+  deleteProduct(productId): Observable<ApiIproduct>{
+    const productUrl = 'http://127.0.0.1:8000/products/all_products' + productId;
+    return this._http.delete<ApiIproduct>(productUrl); // return an observable
+  }
 
 
   uploadPhoto(val:any){

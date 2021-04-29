@@ -1,12 +1,17 @@
-/* form{
-    background: #021725;
+form{
+    background:rgba(0,0,0,.2);
   }
   input, textarea, select, option{
-    background: none !important;
-    border-top: #FFCC33 1px solid !important;
-    border-left: #FFCC33 1px solid !important;
-    border-bottom: #FFCC33 3px solid !important;
-    border-right: #FFCC33 3px solid !important;
+    /* background: none !important; */
+    border-top: #9e9e9e  1px solid !important;
+    border-left: #9e9e9e  1px solid !important;
+    border-bottom: #9e9e9e  3px solid !important;
+    border-right: #9e9e9e  3px solid !important;
     border-radius: 2px !important;
-    color: #FFCC33 !important;
-  } */
+    color: #9e9e9e  !important;
+  }
+
+  button{
+    margin-left: 30%;
+    width: 40%;
+  }

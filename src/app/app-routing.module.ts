@@ -9,12 +9,14 @@ import { AddProductComponent } from './components/products/add-product/add-produ
 import { ApiProductDetailsComponent } from './components/products/api-product-details/api-product-details.component';
 import { ApiProductsComponent } from './components/products/api-products/api-products.component';
 import {SubcategoryComponent} from "./components/subcategory/subcategory/subcategory.component";
+import { UpdateProductComponent } from './components/products/update-product/update-product.component';
 
 const routes: Routes = [
   { path: 'home', component: ContentComponent },
   {path: 'category',component:CategoryComponent},
   {path:'ApiProducts',component:ApiProductsComponent},
   {path:'ApiProduct/:id',component:ApiProductDetailsComponent},
+  {path:'update-product/:id',component:UpdateProductComponent},
   {path:'add-product',component:AddProductComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'sub_category', component: SubcategoryComponent},
