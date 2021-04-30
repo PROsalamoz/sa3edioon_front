@@ -36,7 +36,7 @@ export class ShowsubcategoryComponent implements OnInit {
       category: '',
       name: '',
       slug: '',
-      img: 'anonymous.png'
+      // img: 'anonymous.png'
     };
     this.ModalTitle = 'Add SubCategory';
     this.ActivateAddEditSubCatComp = true;

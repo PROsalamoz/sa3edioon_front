@@ -72,7 +72,7 @@ subCatId: number;
   }
 
     filetrpProducts(): ApiIproduct[]{
-      // this.FilteresProducts = this.ApiProducts;
+      this.FilteresProducts = this.ApiProducts;
       return this.FilteresProducts.filter((prd) => {
       // @ts-ignore
       for (let i = 0; i < this.ProductList.length ; i++){

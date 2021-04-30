@@ -44,11 +44,14 @@
 					<p class="lead font-weight-bold">Description</p>
 
 					<p style="margin: 0%;margin-bottom: 5%;">{{productDetails.description}}</p>
+            <p>{{productDetails.subCat}}</p>
 
 					<form class="d-flex justify-content-left">
-					  <button (click)="addToCart()" class="add-to-cart btn btn-primary" type="button" style="margin-right: 10%;margin-left: 2%;"><a [routerLink]="['/cart-details']">Add to cart</a><span class="fa fa-shopping-cart" style="padding: 0.2em 0.5em;"></span></button>
+					  <button (click)="addToCart()" class="add-to-cart btn btn-primary" type="button" style="margin-right: 10%;margin-left: 2%;">Add to cart<span class="fa fa-shopping-cart" style="padding: 0.2em 0.5em;"></span></button>
             <button class="btn btn-primary" (click)="back()">Go Back</button>
-					  <br>
+            <span class="bg-dark text-white">{{productDetails.subCat}}</span>
+
+            <br>
 						<!-- <i class="fas fa-shopping-cart ml-1"></i>
 </button> -->
 
