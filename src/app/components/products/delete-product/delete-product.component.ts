@@ -13,16 +13,17 @@ export class DeleteProductComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private productServices:ApiProductService
+    private productServices: ApiProductService
     ) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(data => {
       this.productId = data.id; // Capture the ID which i want delete product
+      console.log(this.productId);
 
-      this.productServices.deleteProduct(this.productId).subscribe(deleteddata=>{
-        alert("Product has been Deleted") //delete Data  selected id
-      })
+      this.productServices.deleteProduct(this.productId).subscribe(deleteddata => {
+        alert('Product has been Deleted'); // delete Data  selected id
+      });
     });
   }
 

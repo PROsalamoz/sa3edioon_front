@@ -12,23 +12,24 @@ import { CartServiceService } from 'src/app/services/cart-service.service';
   styleUrls: ['./api-product-details.component.css']
 })
 export class ApiProductDetailsComponent implements OnInit {
-  productDetails:ApiIproduct;
-  constructor(private _apiPrdServ:ApiProductService,private _activedRoute:ActivatedRoute, private cartService: CartServiceService) { }
+  productDetails: ApiIproduct;
+  // tslint:disable-next-line:variable-name
+  constructor(private _apiPrdServ: ApiProductService, private _activedRoute: ActivatedRoute, private cartService: CartServiceService) { }
 
   ngOnInit(): void {
-  
-    let id=this._activedRoute.snapshot.params["id"];
-    this._apiPrdServ.viewProduct(id).subscribe((res)=>{
-      this.productDetails=res;
+
+    let id = this._activedRoute.snapshot.params["id"];
+    this._apiPrdServ.viewProduct(id).subscribe((res) => {
+      this.productDetails = res;
       console.log(this.productDetails);
-    })
+    });
 
 
   }
+  // tslint:disable-next-line:typedef
   addToCart() {
     // console.log(`Adding to cart: ${this.prd.Title}, ${this.prd.price}`);
     const theCartItem = new CartItem(this.productDetails);
     this.cartService.addToCart(theCartItem);
   }
- 
 }

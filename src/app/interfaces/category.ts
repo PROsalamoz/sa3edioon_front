@@ -1,5 +1,6 @@
 export interface Category {
-  CategoryId: number;
+  id: number;
   name: string;
   slug: string;
+  bigCategory: [];
 }

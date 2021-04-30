@@ -3,7 +3,7 @@
 			<div class="container-fliud">
 				<div class="wrapper row">
 					<div class="preview col-md-6">
-						
+
 						<div class="preview-pic tab-content">
 						  <div class="tab-pane active" id="pic-1"><img src="http://placekitten.com/400/252" /></div>
 						  <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
@@ -18,7 +18,7 @@
 						  <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
 						  <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
 						</ul>
-						
+
 					</div>
 					<div class="details col-md-6" style="text-align: right;">
 						<h3 class="product-title"> {{productDetails.Title}} </h3>
@@ -47,14 +47,14 @@
 							<span class="color green"></span>
 							<span class="color blue"></span>
 						</h5>
-						
+
 						<div class="action">
 							<input type="number" value="1" min="0" max="1000" step="1"/>
 							<button class="add-to-cart" (click)="addToCart()">Add to Cart</button>
 							<!-- <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button> -->
 							<!-- <button class="add-to-cart btn btn-default" (click)="addToCart()" type="button" style="margin-right: 10%;">Add to cart<span class="fa fa-shopping-cart" style="padding: 0.2em 0.5em;"></span></button>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
-					
+
 						</div>
 					</div>
 				</div>
@@ -64,27 +64,27 @@
 		 <!--Main layout-->
 		 <!-- <main class="mt-5 pt-4"> -->
 			<div class="container">
-		
+
 			  <!--Grid row-->
 			  <div class="row ">
-		
+
 				<!--Grid column-->
 				<div class="col-md-6 mb-4">
-		
+
 				  <img src="{{productDetails.img}}" class="img-fluid" alt="">
-		
+
 				</div>
 				<!--Grid column-->
-		
+
 				<!--Grid column-->
 				<div class="col-md-6 mb-4">
-		
+
 				  <!--Content-->
 				  <div class="p-4">
 					  <h1>{{productDetails.Title}}</h1>
-					  <div><a href="/update-product/{{productDetails.ProductId}}">Update Product</a> | <a href="/delete-product/{{productDetails.ProductId}}">Delete Product</a></div>
-					  
-		
+					  <div><a href="/update-product/{{productDetails.id}}">Update Product</a> | <a href="/delete-product/{{productDetails.id}}">Delete Product</a></div>
+
+
 					<div class="mb-3">
 					  <a href="">
 						<span style="  width: 18%; font-size: 14px;" class="badge badge-pill badge-primary ">Category 2</span>
@@ -96,18 +96,18 @@
 						<span style="  width: 18%; font-size: 14px;"  class="badge badge-pill badge-warning ">Bestseller</span>
 					  </a>
 					</div>
-		
+
 					<p class="lead">
 					  <span class="mr-1">
 						<del>200EGP</del>
 					  </span>
 					  <span>{{productDetails.price}} EGP</span>
 					</p>
-		
+
 					<p class="lead font-weight-bold">Description</p>
-		
+
 					<p style="margin: 0%;margin-bottom: 5%;">{{productDetails.description}}</p>
-		
+
 					<form class="d-flex justify-content-left">
 					  <!-- Default input -->
 					  <input type="number" value="0" min="0" max="1000" step="1" aria-label="Search" class="form-control" style="width: 100px" (click)="addToCart()">
@@ -115,16 +115,16 @@
 					  <br>
 						<!-- <i class="fas fa-shopping-cart ml-1"></i>
 </button> -->
-							
-		
+
+
 					</form>
-		
+
 				  </div>
 				  <!--Content-->
-		
+
 				</div>
 				<!--Grid column-->
-		
+
 			  </div>
 			  <!--Grid row-->
 			  </div>
@@ -274,7 +274,6 @@
 		</div>
 	  </div>
 	</div>
-  
+
   </div>
   <!-- Classic tabs -->
-		

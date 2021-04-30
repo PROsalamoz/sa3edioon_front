@@ -9,16 +9,17 @@ import { ApiIproduct } from '../interfaces/api-iproduct';
   providedIn: 'root'
 })
 export class ApiProductService {
- 
-  constructor(private _http:HttpClient) { }
 
-  getAllProducts():Observable<ApiIproduct[]>{
-      return this._http.get<ApiIproduct[]>(`http://127.0.0.1:8000/products/all_products`)
+  // tslint:disable-next-line:variable-name
+  constructor(private _http: HttpClient) { }
+
+  getAllProducts(): Observable<ApiIproduct[]>{
+      return this._http.get<ApiIproduct[]>(`http://127.0.0.1:8000/products/all_products`);
   }
 
   viewProduct(pid:number): Observable<ApiIproduct>{
-    
-    return this._http.get<ApiIproduct>(`${environment.ApiUrl}/${pid}`); 
+
+    return this._http.get<ApiIproduct>(`${environment.ApiUrl}/${pid}`);
   }
 
   createProduct(productBody): Observable<ApiIproduct>{

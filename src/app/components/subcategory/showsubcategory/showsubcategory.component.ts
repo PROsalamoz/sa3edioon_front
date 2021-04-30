@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { SubcategoryService } from 'src/app/services/subcategory.service';
+import {ActivatedRoute} from '@angular/router';
+import {logger} from 'codelyzer/util/logger';
+import {SubCategories} from '../../classes/sub-categories';
+import {CategoryService} from '../../../services/category.service';
+import {Category} from '../../../interfaces/category';
 
 @Component({
   selector: 'app-showsubcategory',
@@ -7,56 +12,94 @@ import { SubcategoryService } from 'src/app/services/subcategory.service';
   styleUrls: ['./showsubcategory.component.css']
 })
 export class ShowsubcategoryComponent implements OnInit {
+  SubCategoryList: SubCategories[];
+  AllSubCat: SubCategories[];
 
-  constructor(private Ser:SubcategoryService) { }
-  SubCategoryList:any=[];
+  CategoryObj: Category;
+  catId: number;
 
-  ModalTitle:string;
-  ActivateAddEditSubCatComp:boolean=false;
-  subcat:any;
+  // tslint:disable-next-line:variable-name
+  constructor(private Ser: SubcategoryService,  private _activedRoute: ActivatedRoute) {
+    this.catId = this._activedRoute.snapshot.params.id;
+  }
+
+  ModalTitle: string;
+  ActivateAddEditSubCatComp = false;
+  subcat: any;
   ngOnInit(): void {
+    this.refreshSubCatList2();
     this.refreshSubCatList();
   }
   addClick(){
-    this.subcat={
-      SubCategoryId:0,
-      category:"",
-      name:"",
-      slug:"",
-      img:"anonymous.png"
-    }
-    this.ModalTitle="Add SubCategory";
-    this.ActivateAddEditSubCatComp=true;
+    this.subcat = {
+      SubCategoryId: 0,
+      category: '',
+      name: '',
+      slug: '',
+      img: 'anonymous.png'
+    };
+    this.ModalTitle = 'Add SubCategory';
+    this.ActivateAddEditSubCatComp = true;
 
   }
 
   editClick(item){
     console.log(item);
-    this.subcat=item;
-    this.ModalTitle="Edit Subcategory";
-    this.ActivateAddEditSubCatComp=true;
+    this.subcat = item;
+    this.ModalTitle = 'Edit Subcategory';
+    this.ActivateAddEditSubCatComp = true;
   }
 
   deleteClick(item){
-    if(confirm('Are you sure??')){
-      this.Ser.deleteSubCategory(item.SubCategoryId).subscribe(data=>{
+    if (confirm('Are you sure??')){
+      this.Ser.deleteSubCategory(item.SubCategoryId).subscribe(data => {
         alert(data.toString());
         this.refreshSubCatList();
-      })
+      });
     }
   }
 
   closeClick(){
-    this.ActivateAddEditSubCatComp=false;
+    this.ActivateAddEditSubCatComp = false;
     this.refreshSubCatList();
   }
 
 
-  refreshSubCatList(){
-    this.Ser.getSubCategoryList().subscribe(data=>{
-      this.SubCategoryList=data;
-      console.log(this.SubCategoryList);
+  // tslint:disable-next-line:typedef
+  refreshSubCatList2(){
+    this.Ser.getSubCategoryList().subscribe(data => {
+      this.AllSubCat = data;
+    });
+  }
 
+
+  // tslint:disable-next-line:typedef
+  refreshSubCatList(){
+    this.Ser.getSubCategoryList_By_catId(this.catId).subscribe(data => {
+      this.CategoryObj = data;
+      this.SubCategoryList = this.CategoryObj.bigCategory;
+      this.filetrSubCat();
+      console.log(this.filetrSubCat());
+    },
+      (err) => {
+        console.log(err);
+      });
+  }
+
+  filetrSubCat(): SubCategories[]{
+    return this.AllSubCat.filter((subCat) => {
+      // @ts-ignore
+      // tslint:disable-next-line:triple-equals
+      // subCat.id == this.SubCategoryList[0];
+      for (let i = 0; i < this.SubCategoryList.length; i++){
+
+        // @ts-ignore
+        // tslint:disable-next-line:triple-equals
+        if (subCat.id == this.SubCategoryList[i]){
+          return true;
+        }
+      }
+      // this.SubCategoryList.map(this.Ser.getSubCategoryList_By_catId());
     });
   }
 }

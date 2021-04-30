@@ -3,21 +3,21 @@
   <p>{{sub.id}}</p>
 </div>-->
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary float-right m-2" 
+<button type="button" class="btn btn-primary float-right m-2"
 data-toggle="modal" data-target="#exampleModal"
 (click)="addClick()"
 data-backdrop="static" data-keyboard="false"
 >
     Add Subcategory
   </button>
-  
+
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h5>
-          <button type="button" class="close" 
+          <button type="button" class="close"
           data-dismiss="modal" aria-label="Close"
           (click)="closeClick()" >
             <span aria-hidden="true">&times;</span>
@@ -45,12 +45,12 @@ data-backdrop="static" data-keyboard="false"
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let dataItem of SubCategoryList">
-            <td>{{dataItem.SubCategoryId}}</td>
-            <td>{{dataItem.name}}</td>
+        <tr *ngFor="let dataItem of filetrSubCat();let index">
+            <td>{{index.id}}</td>
+            <td><a>{{dataItem.name}}</a></td>
             <td>{{dataItem.category}}</td>
             <td>{{dataItem.slug}}</td>
-             <td>{{dataItem.img}}</td>
+             <td><img class="rounded" src="{{dataItem.img}}"></td>
             <td>
                 <button type="button" class="btn btn-light mr-1"
                 data-toggle="modal" data-target="#exampleModal"
