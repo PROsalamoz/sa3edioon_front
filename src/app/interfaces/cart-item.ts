@@ -9,7 +9,7 @@ export class CartItem {
   quantity: number;
 
   constructor(product: ApiIproduct) {
-  this.id = product.ProductId.toString();
+  this.id = product.id.toString();
   this.name = product.Title;
   this.imageUrl = product.img;
   this.unitPrice = product.price;

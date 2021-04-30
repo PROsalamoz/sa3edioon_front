@@ -5,11 +5,11 @@
 
 
    <!-- Navbar -->
-   <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+   <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar" style="background-color: #8300ff38;">
       <div class="container">
 
          <!-- Brand -->
-         <a class="navbar-brand">
+         <a class="navbar-brand"  [routerLink]="['/home']">
             <strong>Shopy</strong>
          </a>
 
@@ -25,12 +25,9 @@
             <!-- Left -->
             <ul class="navbar-nav mr-auto">
                <li class="nav-item active">
-                  <a class="nav-link" [routerLink]="['/Home']" routerLinkActive="activeLink">Home
+                  <a class="nav-link" [routerLink]="['/home']" routerLinkActive="activeLink">Home
                      <span class="sr-only">(current)</span>
                   </a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['/category']">category</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" [routerLink]="['/ApiProducts']">Products</a>
@@ -78,8 +75,7 @@
                         <div><img src="./../../../../assets/images/img-1.png" class="image_1"></div>
                      </div>
                   </div>
-                  <div class="button_main"><button class="all_text">All</button><input type="text" class="Enter_text"
-                        placeholder="Enter keywords" name=""><button class="search_text">Search</button></div>
+
                </div>
             </div>
             <div class="carousel-item">
@@ -97,8 +93,6 @@
                         <div><img src="./../../../../assets/images/img-1.png" class="image_1"></div>
                      </div>
                   </div>
-                  <div class="button_main"><button class="all_text">All</button><input type="text" class="Enter_text"
-                        placeholder="Enter keywords" name=""><button class="search_text">Search</button></div>
                </div>
             </div>
             <div class="carousel-item">
@@ -116,8 +110,6 @@
                         <div><img src="./../../../../assets/images/img-1.png" class="image_1"></div>
                      </div>
                   </div>
-                  <div class="button_main"><button class="all_text">All</button><input type="text" class="Enter_text"
-                        placeholder="Enter keywords" name=""><button class="search_text">Search</button></div>
                </div>
             </div>
          </div>

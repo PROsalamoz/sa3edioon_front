@@ -3,7 +3,7 @@
     <div class="form-row">
       <div class="col-md-6 mb-3">
         <label for="validationServer01">Product Id</label>
-        <input type="text" class="form-control" required name="id"  [(ngModel)]="productDetails.ProductId"  ngModel>
+        <input type="text" class="form-control" required name="ProductId"  [(ngModel)]="productDetails.id"  ngModel>
       </div>
       <div class="col-md-6 mb-3">
         <label for="validationServer02">Product Name</label>
@@ -14,7 +14,7 @@
         <input type="text" class="form-control"  [(ngModel)]="productDetails.categoryId" required name="categoryId" ngModel>
       </div> -->
     </div>
-    
+
       <!-- <div class="col-md-6 mb-3">
         <label>Rating</label>
         <select class="custom-select" required name="product_rating" ngModel>
@@ -26,7 +26,7 @@
           <option value="5">5</option>
         </select>
       </div> -->
-  
+
     <!-- <div class="form-row"> -->
         <!-- <div class="col-md-6 mb-3">
           <label for="validationServer01">Product Color</label>
@@ -66,7 +66,7 @@
             <option value="5">5</option>
           </select>
         </div> -->
-    
+
           <div class="col-md-6 mb-3">
             <label for="validationServer02">Product discount</label>
             <input type="text" class="form-control" required name="discount"  [(ngModel)]="productDetails.discount"  ngModel>
@@ -76,8 +76,8 @@
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="validationServer03">Product stock</label>
-          <input type="text" class="form-control" required name="productstock"  [(ngModel)]="productDetails.stock"  ngModel>
+          <input type="text" class="form-control" required name="stock"  [(ngModel)]="productDetails.stock"  ngModel>
         </div>
         </div>
-    <button class="btn btn-primary" type="submit">Update Product</button>
+    <button (change)="changeImage($event)" class="btn btn-primary" type="submit">Update Product</button>
   </form>
