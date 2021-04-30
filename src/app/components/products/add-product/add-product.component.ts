@@ -16,7 +16,7 @@ export class AddProductComponent implements OnInit {
     console.log(form.value);
 
     let newProduct = {
-        ProductId: form.value.product_id,
+        id: form.value.product_id,
         Title: form.value.product_name,
         price: form.value.product_price,
         description: form.value.product_desc,
