@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router, RouterLink} from '@angular/router';
 import { ApiIproduct } from 'src/app/interfaces/api-iproduct';
 import { ApiProductService } from 'src/app/services/api-product.service';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-update-product',
@@ -16,7 +17,8 @@ export class UpdateProductComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private productsService: ApiProductService
+    private productsService: ApiProductService,
+    private location: Location,
       ) { }
 
   ngOnInit(): void {
@@ -39,16 +41,22 @@ export class UpdateProductComponent implements OnInit {
         description: form.value.description,
         discount: form.value.discount,
         slug: '',
-  img: '',
+  // img: '',
   stock:  form.value.stock,
   subCat:2,
   };
     console.log(form);
     this.productsService.updateProduct(this.productId, updateProduct).subscribe(data=>{
       console.log(data)
+      alert('Updated Successfully');
+      // @ts-ignore
+      this.location.back();
     });
+    return
+  }
 
-    
+  back(){
+    this.location.back();
   }
 
 }

@@ -5,6 +5,7 @@ import { ApiIproduct } from 'src/app/interfaces/api-iproduct';
 import { ApiProductService } from 'src/app/services/api-product.service';
 import { CartItem } from 'src/app/interfaces/cart-item';
 import { CartServiceService } from 'src/app/services/cart-service.service';
+import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-api-product-details',
@@ -13,10 +14,10 @@ import { CartServiceService } from 'src/app/services/cart-service.service';
 })
 export class ApiProductDetailsComponent implements OnInit {
   productDetails:ApiIproduct;
-  constructor(private _apiPrdServ:ApiProductService,private _activedRoute:ActivatedRoute, private cartService: CartServiceService) { }
+  constructor(private _apiPrdServ:ApiProductService,private _activedRoute:ActivatedRoute, private cartService: CartServiceService,private location: Location,) { }
 
   ngOnInit(): void {
-  
+
     let id=this._activedRoute.snapshot.params["id"];
     this._apiPrdServ.viewProduct(id).subscribe((res)=>{
       this.productDetails=res;
@@ -30,5 +31,7 @@ export class ApiProductDetailsComponent implements OnInit {
     const theCartItem = new CartItem(this.productDetails);
     this.cartService.addToCart(theCartItem);
   }
- 
+  back(){
+    this.location.back();
+  }
 }

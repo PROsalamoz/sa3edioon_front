@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiProductService } from 'src/app/services/api-product.service';
+import {SubcategoryService} from "../../../services/subcategory.service";
+import {SubCategories} from "../../classes/sub-categories";
+import {Observable} from "rxjs";
+import {Location} from "@angular/common";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-add-product',
@@ -7,10 +12,12 @@ import { ApiProductService } from 'src/app/services/api-product.service';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
-
-  constructor(private productService: ApiProductService) { }
+subCategories: Observable<SubCategories[]>;
+  constructor(private productService: ApiProductService, private subCat: SubcategoryService, private route: Router) { }
 
   ngOnInit(): void {
+    this.loadCategoryList();
+
   }
   addNewProduct(form){
     console.log(form.value);
@@ -28,10 +35,16 @@ export class AddProductComponent implements OnInit {
     console.log(newProduct);
 
     this.productService.createProduct(newProduct).subscribe(data => {
-      alert(data.toString());
+      this.route.navigateByUrl('/ApiProducts');
     });
 
-
-  
 }
+
+  loadCategoryList(){
+    this.subCat.getSubCategoryList().subscribe((data:any)=>{
+      this.subCategories=data;
+      console.log(this.subCategories);
+    });
+  }
+
 }
