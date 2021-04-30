@@ -4,6 +4,7 @@ import {ShopservicesService} from '../../../services/shopservices.service';
 import {Observable} from 'rxjs';
 import {Category} from '../../../interfaces/category';
 import {CategoryService} from '../../../services/category.service';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-main',
@@ -20,11 +21,12 @@ export class MainComponent implements OnInit, OnChanges {
   // tslint:disable-next-line:variable-name
   @Input() all_shops: number;
   @Input() CategoryID;
+  searchMode: boolean;
   // tslint:disable-next-line:variable-name
   // @Input() isFilter: boolean;
   // @Output() isFilterByCatEvent: EventEmitter<boolean>;
   // tslint:disable-next-line:variable-name
-  constructor(private myservice: ShopservicesService, private _categoryService: CategoryService) {
+  constructor(private myservice: ShopservicesService, private _categoryService: CategoryService, private _route: ActivatedRoute) {
     // this.isFilterByCat = false;
     // this.isFilterByCatEvent = new EventEmitter<boolean>();
     // this.filterShops = [];
@@ -32,9 +34,14 @@ export class MainComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-    this.get_all_shops();
-    // this.isFilterByCatEvent.emit(this.isFilterByCat);
+    this.searchMode = this._route.snapshot.paramMap.has('keyword');
 
+    if (this.searchMode){
+      this.handleSearchMode();
+    }
+    else {
+      this.get_all_shops();
+    }
     // get all categories
     this._categoryService.get_all_categories().subscribe(data => {
       // tslint:disable-next-line:no-unused-expression
@@ -64,7 +71,7 @@ export class MainComponent implements OnInit, OnChanges {
     if (this.CategoryID == 0){
       return this.shops;
     }
-  else {
+    else {
       this.filterShops = this.shops;
       return this.filterShops.filter((shop) => {
         this.isFilterByCat = true;
@@ -73,4 +80,20 @@ export class MainComponent implements OnInit, OnChanges {
       });
     }
   }
+
+
+  handleSearchMode() {
+    const keyword: string = this._route.snapshot.paramMap.get('keyword');
+
+    this.myservice.searchForShop(keyword).subscribe(
+      (data) => {
+        this.shops = data;
+      },
+      (error) => {
+        console.log(error);
+
+      }
+    );
+  }
+
 }

@@ -2,6 +2,7 @@
   <div class="demo">
     <div class="container">
         <div class="row text-center">
+          <app-search-for-product class="mt-2" style="margin-left: 30%"></app-search-for-product>
             <!-- <h1 class="white">Products</h1> -->
         </div>
 <br>
@@ -10,7 +11,7 @@
                 <div class="product-grid" >
                     <div class="product-image">
                         <a href="#" class="image">
-                            <img class="pic-1" src="{{item.img}}"> 
+                            <img class="pic-1" src="{{item.img}}">
                             <!-- <a class="btn btn-warning" [routerLink]="['/ApiProduct',item.id]" style="color: white;"><b>Show</b></a> -->
                          </a>
                         <span class="product-discount-label">{{item.discount}}%</span>
@@ -37,4 +38,4 @@
                 </div>
                 <br>
             </div>
-            </div> 
+            </div>
