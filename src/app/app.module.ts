@@ -65,6 +65,7 @@ import { FooterComponent } from './components/site-layout/footer/footer.componen
     UpdateProductComponent,
     DeleteProductComponent,
     FooterComponent,
+
   ],
   imports: [
     BrowserModule,

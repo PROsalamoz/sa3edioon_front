@@ -21,13 +21,15 @@
                         </ul>
                     </div>
                     <div class="product-content">
-                        <ul class="rating">
+                        <!-- <ul class="rating">
                             <li class="fa fa-star"></li>
                             <li class="fa fa-star"></li>
                             <li class="fa fa-star"></li>
                             <li class="fa fa-star"></li>
                             <li class="fa fa-star"></li>
-                        </ul>
+                        </ul> -->
+                        <div style="font-size:x-large;color:orange">
+                        <ngb-rating [max]="5" [(rate)]="currentRate" [readonly]="false"></ngb-rating></div>
                         <h3 class="title"><a [routerLink]="['/ApiProduct',item.ProductId]">{{item.Title}}</a></h3>
                         <div class="price"><span></span>{{item.price | currency:"USD"}}</div>
                         <a (click)="addToCart(item)" class="add-to-cart" data-toggle="modal" data-target="#product_view"><i class="fa fa-shopping-cart"></i>add to cart</a>

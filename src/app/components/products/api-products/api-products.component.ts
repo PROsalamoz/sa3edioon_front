@@ -12,8 +12,9 @@ import { CartServiceService } from 'src/app/services/cart-service.service';
 })
 export class ApiProductsComponent implements OnInit {
 ApiProducts:ApiIproduct[];
-  constructor(private _apiPrdServ:ApiProductService, private cartService: CartServiceService) { }
 
+  constructor(private _apiPrdServ:ApiProductService, private cartService: CartServiceService) { }
+  currentRate:number=3;
   ngOnInit(): void {
    this._apiPrdServ.getAllProducts().subscribe((res)=>{
     //  console.log(res);

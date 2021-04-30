@@ -11,6 +11,7 @@ import { ApiProductsComponent } from './components/products/api-products/api-pro
 import {SubcategoryComponent} from "./components/subcategory/subcategory/subcategory.component";
 import { UpdateProductComponent } from './components/products/update-product/update-product.component';
 import { DeleteProductComponent } from './components/products/delete-product/delete-product.component';
+import { ShopsComponent } from './components/shops/shops/shops.component';
 
 const routes: Routes = [
   { path: 'home', component: ContentComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'cart-details', component: CartDetailsComponent},
   { path: 'login', component: LoginComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
+  { path: 'shops', component: ShopsComponent },
 ];
 
 @NgModule({
