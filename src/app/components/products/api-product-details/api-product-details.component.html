@@ -3,7 +3,7 @@
 			<div class="container-fliud">
 				<div class="wrapper row">
 					<div class="preview col-md-6">
-
+						
 						<div class="preview-pic tab-content">
 						  <div class="tab-pane active" id="pic-1"><img src="http://placekitten.com/400/252" /></div>
 						  <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
@@ -18,11 +18,11 @@
 						  <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
 						  <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
 						</ul>
-
+						
 					</div>
 					<div class="details col-md-6" style="text-align: right;">
 						<h3 class="product-title"> {{productDetails.Title}} </h3>
-						<a href="/update-product/{{productDetails.ProductId}}">Update Product</a>|<a href="/delete-product/{{productDetails.ProductId}}">Delete Product</a>
+						<a href="/update-product/{{productDetails.id}}}">Update Product</a>|<a href="/delete-product/{{productDetails.id}}">Delete Product</a>
 						<div class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>
@@ -47,14 +47,14 @@
 							<span class="color green"></span>
 							<span class="color blue"></span>
 						</h5>
-
+						
 						<div class="action">
 							<input type="number" value="1" min="0" max="1000" step="1"/>
 							<button class="add-to-cart" (click)="addToCart()">Add to Cart</button>
 							<!-- <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button> -->
 							<!-- <button class="add-to-cart btn btn-default" (click)="addToCart()" type="button" style="margin-right: 10%;">Add to cart<span class="fa fa-shopping-cart" style="padding: 0.2em 0.5em;"></span></button>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
-
+					
 						</div>
 					</div>
 				</div>
@@ -64,27 +64,27 @@
 		 <!--Main layout-->
 		 <!-- <main class="mt-5 pt-4"> -->
 			<div class="container">
-
+		
 			  <!--Grid row-->
 			  <div class="row ">
-
+		
 				<!--Grid column-->
 				<div class="col-md-6 mb-4">
-
+		
 				  <img src="{{productDetails.img}}" class="img-fluid" alt="">
-
+		
 				</div>
 				<!--Grid column-->
-
+		
 				<!--Grid column-->
 				<div class="col-md-6 mb-4">
-
+		
 				  <!--Content-->
 				  <div class="p-4">
 					  <h1>{{productDetails.Title}}</h1>
-					  <div><a href="/update-product/{{productDetails.id}}">Update Product</a> | <a href="/delete-product/{{productDetails.id}}">Delete Product</a></div>
-
-
+					  <div><a [routerLink]="['/add-product']">Add Product</a> |<a [routerLink]="['/update-product/',productDetails.id]">Update Product</a> | <a [routerLink]="['/delete-product/',productDetails.id]">Delete Product</a></div>
+					  
+		
 					<div class="mb-3">
 					  <a href="">
 						<span style="  width: 18%; font-size: 14px;" class="badge badge-pill badge-primary ">Category 2</span>
@@ -96,35 +96,35 @@
 						<span style="  width: 18%; font-size: 14px;"  class="badge badge-pill badge-warning ">Bestseller</span>
 					  </a>
 					</div>
-
+		
 					<p class="lead">
 					  <span class="mr-1">
 						<del>200EGP</del>
 					  </span>
 					  <span>{{productDetails.price}} EGP</span>
 					</p>
-
+		
 					<p class="lead font-weight-bold">Description</p>
-
+		
 					<p style="margin: 0%;margin-bottom: 5%;">{{productDetails.description}}</p>
-
+		
 					<form class="d-flex justify-content-left">
 					  <!-- Default input -->
 					  <input type="number" value="0" min="0" max="1000" step="1" aria-label="Search" class="form-control" style="width: 100px" (click)="addToCart()">
-					  <button class="add-to-cart btn btn-primary" type="button" style="margin-right: 10%;margin-left: 2%;">Add to cart<span class="fa fa-shopping-cart" style="padding: 0.2em 0.5em;"></span></button>
+					  <button class="add-to-cart btn btn-primary" type="button" style="margin-right: 10%;margin-left: 2%;"><a [routerLink]="['/cart-details']">Add to cart</a><span class="fa fa-shopping-cart" style="padding: 0.2em 0.5em;"></span></button>
 					  <br>
 						<!-- <i class="fas fa-shopping-cart ml-1"></i>
 </button> -->
-
-
+							
+		
 					</form>
-
+		
 				  </div>
 				  <!--Content-->
-
+		
 				</div>
 				<!--Grid column-->
-
+		
 			  </div>
 			  <!--Grid row-->
 			  </div>
@@ -133,7 +133,7 @@
 
 
 			  <!-- Classic tabs -->
-<div class="classic-tabs border rounded px-4 pt-1">
+<!-- <div class="classic-tabs border rounded px-4 pt-1">
 
 	<ul class="nav tabs-primary nav-justified" id="advancedTab" role="tablist">
 	  <li class="nav-item">
@@ -149,7 +149,7 @@
 	<div class="tab-content" id="advancedTabContent">
 	  <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
 		<h5>Product Description</h5>
-		<p class="small text-muted text-uppercase mb-2">Shirts</p>
+		<p class="small text-muted text-uppercase mb-2">Shirts</p> -->
 		<!-- <ul class="rating">
 		  <li>
 			<i class="fa fa-star fa-sm text-primary"></i>
@@ -167,7 +167,7 @@
 			<i class="fa fa-star fa-sm text-primary"></i>
 		  </li>
 		</ul> -->
-		<h6>12.99 $</h6>
+		<!-- <h6>12.99 $</h6>
 		<p class="pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit
 		  error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam. Distinctio,
 		  officia quis dolore quos sapiente tempore alias.</p>
@@ -198,7 +198,7 @@
 			  <p class="mt-1 mb-2">
 				<strong>Marthasteward </strong>
 				<span>– </span><span>January 28, 2020</span>
-			  </p>
+			  </p> -->
 			  <!-- <ul class="rating mb-sm-0">
 				<li>
 				  <i class="fa fa-star fa-sm text-primary"></i>
@@ -216,14 +216,14 @@
 				  <i class="fa fa-star fa-sm text-primary"></i>
 				</li>
 			  </ul> -->
-			</div>
+			<!-- </div>
 			<p class="mb-0">Nice one, love it!</p>
 		  </div>
 		</div>
 		<hr>
 		<h5 class="mt-4">Add a review</h5>
 		<p>Your email address will not be published.</p>
-		<div class="my-3">
+		<div class="my-3"> -->
 		  <!-- <ul class="rating mb-0">
 			<li>
 			  <a href="#!">
@@ -251,20 +251,20 @@
 			  </a>
 			</li>
 		  </ul> -->
-		</div>
-		<div>
+		<!-- </div>
+		<div> -->
 		  <!-- Your review -->
-		  <div class="md-form md-outline">
+		  <!-- <div class="md-form md-outline">
 			<textarea id="form76" class="md-textarea form-control pr-6" rows="4"></textarea>
 			<label for="form76">Your review</label>
-		  </div>
+		  </div> -->
 		  <!-- Name -->
-		  <div class="md-form md-outline">
+		  <!-- <div class="md-form md-outline">
 			<input type="text" id="form75" class="form-control pr-6">
 			<label for="form75">Name</label>
-		  </div>
+		  </div> -->
 		  <!-- Email -->
-		  <div class="md-form md-outline">
+		  <!-- <div class="md-form md-outline">
 			<input type="email" id="form77" class="form-control pr-6">
 			<label for="form77">Email</label>
 		  </div>
@@ -274,6 +274,7 @@
 		</div>
 	  </div>
 	</div>
-
-  </div>
+  
+  </div> -->
   <!-- Classic tabs -->
+		

@@ -31,27 +31,24 @@ export class UpdateProductComponent implements OnInit {
     });
   }
 
-  // tslint:disable-next-line:typedef
   updateProduct(form){
     const updateProduct = {
-       ProductId: form.value.ProductId,
+      id: form.value.id,
         Title: form.value.Title,
         price: form.value.price,
         description: form.value.description,
         discount: form.value.discount,
         slug: '',
-  // img: '',
+  img: '',
   stock:  form.value.stock,
-  subCat: 2,
+  subCat:2,
   };
     console.log(form);
-    // @ts-ignore
-    this.productsService.updateProduct(this.productId, updateProduct).subscribe(data => {
-      console.log(data);
+    this.productsService.updateProduct(this.productId, updateProduct).subscribe(data=>{
+      console.log(data)
     });
-  }
-  changeImage(event): File{
-    return event.target.data[0];
+
+    
   }
 
 }
