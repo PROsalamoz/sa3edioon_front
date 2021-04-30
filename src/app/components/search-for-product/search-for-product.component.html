@@ -1,0 +1,8 @@
+ <div class="container h-100">
+      <div class="d-flex justify-content-center h-100">
+        <div class="searchbar">
+          <input #keyword (keyup.enter)="search_for_product(keyword.value)" class="search_input" type="text" name="" placeholder="Search...">
+          <button (click)="search_for_product(keyword.value)" class="search_icon"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </div>
