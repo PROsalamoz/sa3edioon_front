@@ -47,7 +47,7 @@ data-backdrop="static" data-keyboard="false"
     <tbody>
         <tr *ngFor="let dataItem of filetrSubCat();let index">
             <td>{{index.id}}</td>
-            <td><a>{{dataItem.name}}</a></td>
+            <td><a [routerLink]="['/ApiProducts', dataItem.id]">{{dataItem.name}}</a></td>
             <td>{{dataItem.category}}</td>
             <td>{{dataItem.slug}}</td>
              <td><img class="rounded" src="{{dataItem.img}}"></td>

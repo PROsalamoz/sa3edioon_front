@@ -4,6 +4,8 @@ import { ApiIproduct } from 'src/app/interfaces/api-iproduct';
 import { CartItem } from 'src/app/interfaces/cart-item';
 import { ApiProductService } from 'src/app/services/api-product.service';
 import { CartServiceService } from 'src/app/services/cart-service.service';
+import {ActivatedRoute} from "@angular/router";
+import {SubCategories} from "../../classes/sub-categories";
 
 @Component({
   selector: 'app-api-products',
@@ -11,18 +13,24 @@ import { CartServiceService } from 'src/app/services/cart-service.service';
   styleUrls: ['./api-products.component.css']
 })
 export class ApiProductsComponent implements OnInit {
-ApiProducts:ApiIproduct[];
+ApiProducts: ApiIproduct[];
+FilteresProducts: ApiIproduct[];
+SubCategorySelected: SubCategories;
+ProductList=[];
+subCatId: number;
 
-  constructor(private _apiPrdServ:ApiProductService, private cartService: CartServiceService) { }
+  constructor(private _apiPrdServ:ApiProductService, private cartService: CartServiceService,
+              private _activedRoute:ActivatedRoute) {
+  }
   currentRate:number=3;
   ngOnInit(): void {
-   this._apiPrdServ.getAllProducts().subscribe((res)=>{
-    //  console.log(res);
-    this.ApiProducts=res;
-   },(err)=>{
-     console.log(err);
+    this.subCatId=this._activedRoute.snapshot.params["subCatId"];
+    // get all product
+   this.getAllProduct();
 
-   })
+    this.getProductsBySubCatId();
+    console.log(this.ApiProducts);
+
   }
 
   addToCart(theProduct: ApiIproduct) {
@@ -32,6 +40,48 @@ ApiProducts:ApiIproduct[];
     const theCartItem = new CartItem(theProduct);
 
     this.cartService.addToCart(theCartItem);
+  }
+
+  // @ts-ignore
+  // getAllProduct(): ApiIproduct[]{
+
+  // }
+
+  getAllProduct(): ApiIproduct[]{
+    this._apiPrdServ.getAllProducts().subscribe((res)=>{
+      console.log(res);
+      this.ApiProducts = res;
+      this.FilteresProducts = res;
+    },(err)=>{
+      console.log(err);
+    });
+  }
+  // @ts-ignore
+  getProductsBySubCatId(): SubCategories{
+    this._apiPrdServ.getSubCatSelected(this.subCatId).subscribe(
+      (result) => {
+        this.SubCategorySelected = result;
+        this.ProductList = result.products;
+        this.filetrpProducts();
+        console.log(this.filetrpProducts());
+      },
+      (err) => {
+        console.log(err)
+      }
+    );
+  }
+
+    filetrpProducts(): ApiIproduct[]{
+      // this.FilteresProducts = this.ApiProducts;
+      return this.FilteresProducts.filter((prd) => {
+      // @ts-ignore
+      for (let i = 0; i < this.ProductList.length ; i++){
+
+        if (prd.id == this.ProductList[i]){
+          return true;
+        }
+      }
+    });
   }
 
 }

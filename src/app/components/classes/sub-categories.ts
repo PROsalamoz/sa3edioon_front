@@ -4,4 +4,5 @@ export class SubCategories {
     slug: string;
     img: string;
     category: number;
+    products: [];
 }

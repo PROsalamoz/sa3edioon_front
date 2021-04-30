@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'home', component: ContentComponent },
   // {path: 'category', component: CategoryComponent},
   {path: 'ApiProducts', component: ApiProductsComponent},
+  {path: 'ApiProducts/:subCatId', component: ApiProductsComponent},
   {path: 'ApiProduct/:id', component: ApiProductDetailsComponent},
   {path: 'update-product/:id', component: UpdateProductComponent},
   { path: 'delete-product/:id', component: DeleteProductComponent},
