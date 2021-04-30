@@ -30,6 +30,7 @@ const routes: Routes = [
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: 'shops', component: ShopsComponent },
   { path: 'search/:keyword', component: ApiProductsComponent},
+  { path: 'search/shop/:keyword', component: ContentComponent},
 ];
 
 // @ts-ignore

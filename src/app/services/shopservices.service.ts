@@ -17,6 +17,11 @@ export class ShopservicesService {
     return this.http.get<Ishops[]>(this.url);
   }
 
+  searchForShop(keyword: string): Observable<Ishops[]>{
+    const searchUrl = `http://127.0.0.1:8000/shops/all_shops/?search=${keyword}`
+    return this.http.get<Ishops[]>(searchUrl);
+  }
+
   // getProductsByCatId(catID: number): Ishops[]{
   //   return this.get_all_shops().filter((productObj) => {
   //     // tslint:disable-next-line:triple-equals
