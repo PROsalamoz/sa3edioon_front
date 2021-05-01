@@ -1,3 +1,4 @@
+import { HideAndDispalyService } from 'src/app/services/hide-and-dispaly.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
  
-  constructor() { }
+  constructor(public carousel:HideAndDispalyService) { }
 
   ngOnInit(): void {
   }

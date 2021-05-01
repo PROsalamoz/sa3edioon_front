@@ -6,6 +6,7 @@ import { ApiProductService } from 'src/app/services/api-product.service';
 import { CartItem } from 'src/app/interfaces/cart-item';
 import { CartServiceService } from 'src/app/services/cart-service.service';
 import {Location} from "@angular/common";
+import { HideAndDispalyService } from 'src/app/services/hide-and-dispaly.service';
 
 @Component({
   selector: 'app-api-product-details',
@@ -14,10 +15,10 @@ import {Location} from "@angular/common";
 })
 export class ApiProductDetailsComponent implements OnInit {
   productDetails:ApiIproduct;
-  constructor(private _apiPrdServ:ApiProductService,private _activedRoute:ActivatedRoute, private cartService: CartServiceService,private location: Location,) { }
+  constructor(private _apiPrdServ:ApiProductService,private _activedRoute:ActivatedRoute, private cartService: CartServiceService,private location: Location,public carousel:HideAndDispalyService) { }
 
   ngOnInit(): void {
-
+    this.carousel.hide();
     let id=this._activedRoute.snapshot.params["id"];
     this._apiPrdServ.viewProduct(id).subscribe((res)=>{
       this.productDetails=res;
