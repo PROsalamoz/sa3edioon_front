@@ -36,21 +36,17 @@ data-backdrop="static" data-keyboard="false"
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>SubCategoryId</th>
+            <th>Number</th>
             <th>name</th>
-            <th>category</th>
             <th>slug</th>
-            <th>Image</th>
             <th>Options</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let dataItem of filetrSubCat();let index">
-            <td>{{index.id}}</td>
-            <td><a>{{dataItem.name}}</a></td>
-            <td>{{dataItem.category}}</td>
+        <tr *ngFor="let dataItem of filetrSubCat();let i = index">
+            <td>{{i+1}}</td>
+            <td><a [routerLink]="['/ApiProducts', dataItem.id]">{{dataItem.name}}</a></td>
             <td>{{dataItem.slug}}</td>
-             <td><img class="rounded" src="{{dataItem.img}}"></td>
             <td>
                 <button type="button" class="btn btn-light mr-1"
                 data-toggle="modal" data-target="#exampleModal"

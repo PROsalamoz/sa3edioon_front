@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiIproduct } from '../interfaces/api-iproduct';
+import {SubCategories} from "../components/classes/sub-categories";
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,12 @@ export class ApiProductService {
 
   getAllProducts(): Observable<ApiIproduct[]>{
       return this._http.get<ApiIproduct[]>(`http://127.0.0.1:8000/products/all_products`);
+  }
+
+
+  //get product by sub category
+  getSubCatSelected(subId: number): Observable<SubCategories>{
+    return this._http.get<SubCategories>(`http://127.0.0.1:8000/shops/subcategory/${subId}`);
   }
 
   viewProduct(pid:number): Observable<ApiIproduct>{

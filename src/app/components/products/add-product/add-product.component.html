@@ -3,10 +3,6 @@
 <form (submit)="addNewProduct(addProductForm)" #addProductForm="ngForm" style="padding: 10px;" >
     <div class="form-row">
       <div class="col-sm-6 mb-3">
-        <label for="validationServer01">Product Id</label>
-        <input type="text" class="form-control" value="Enter Product Name" required name="product_id" ngModel>
-      </div>
-      <div class="col-sm-6 mb-3">
         <label for="validationServer02">Product Name</label>
         <input type="text" class="form-control" required name="product_name" ngModel>
       </div>
@@ -22,9 +18,21 @@
         <label for="validationServer01">Product Price</label>
         <input type="text" class="form-control" value="Enter Product Name" required name="product_price" ngModel>
       </div>
-    
+
+        <div class="col-sm-6 mb-3">
+          <label for="validationServer01">Product Stock</label>
+          <input type="text" class="form-control" value="Enter Product Name" required name="product_id" ngModel>
+        </div>
+
+        <div class="col-sm-6 mb-3">
+          <label for="validationServer01"> Sub</label>
+         <select>
+           <option *ngFor="let sub of subCategories" value="{{sub.id}}">{{sub.name}}</option>
+         </select>
+        </div>
+
     </div>
-    
+
 
     <div class="form-row">
 

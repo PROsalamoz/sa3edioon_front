@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import {Category} from '../interfaces/category';
+import {SubCategories} from "../components/classes/sub-categories";
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +13,8 @@ export class SubcategoryService {
   readonly PhotoUrl = "http://127.0.0.1:8000/media/";
   constructor(private http:HttpClient) { }
 
-  getSubCategoryList():Observable<any[]>{
-    return this.http.get<any[]>(this.APIUrl + '/subcategory/');
+  getSubCategoryList():Observable<SubCategories[]>{
+    return this.http.get<SubCategories[]>(this.APIUrl + '/subcategory/');
   }
 
   getSubCategoryList_By_catId(id: number): Observable<Category>{

@@ -16,7 +16,6 @@ export class AddEditsubcategoryComponent implements OnInit {
   category:number;
   name:string;
   slug:string;
-  img:string;
   SubCatList:any=[];
   PhotoFilePath: string;
   PhotoFileName: string;
@@ -25,29 +24,19 @@ export class AddEditsubcategoryComponent implements OnInit {
     this.loadCategoryList();
   }
 
-
-  // id: number;
-  // name: string;
-  // slug: string;
-  // img: string;
-  // category: number;
   loadCategoryList(){
     this.serv.getCategoryList().subscribe((data:any)=>{
       this.categorylist=data;
      console.log(this.categorylist);
-      // this.SubCategoryId=this.subcat.SubCategoryId;
-      // this.category=this.categorylist.CategoryId;
-      // console.log(this.category);
      this.name=this.subcat.name;
       this.slug=this.subcat.slug;
-      this.PhotoFilePath=this.service.PhotoUrl+this.PhotoFileName;
+      // this.PhotoFilePath=this.service.PhotoUrl+this.PhotoFileName;
     });
   }
   addSubCategory(){
     var val = {id:this.SubCategoryId,
       name:this.name,
       slug:this.slug,
-      img:this.img,
       category:this.category};
 
     this.service.addSubCategory(val).subscribe(res=>{
@@ -59,7 +48,6 @@ export class AddEditsubcategoryComponent implements OnInit {
     var val = {SubCategoryId:this.SubCategoryId,
       name:this.name,
       slug:this.slug,
-      img:this.img,
       category:this.category};
 
     this.service.updateSubCategory(val).subscribe(res=>{
@@ -68,14 +56,14 @@ export class AddEditsubcategoryComponent implements OnInit {
   }
 
 
-  uploadPhoto(event){
-    var file=event.target.files[0];
-    const formData:FormData=new FormData();
-    formData.append('uploadedFile',file,file.name);
-
-    this.service.UploadPhoto(formData).subscribe((data:any)=>{
-      this.img=data.toString();
-      this.PhotoFilePath=this.service.PhotoUrl+this.img;
-     })
-  }
+  // uploadPhoto(event){
+  //   var file=event.target.files[0];
+  //   const formData:FormData=new FormData();
+  //   formData.append('uploadedFile',file,file.name);
+  //
+  //   this.service.UploadPhoto(formData).subscribe((data:any)=>{
+  //     // this.img=data.toString();
+  //     // this.PhotoFilePath=this.service.PhotoUrl+this.img;
+  //    })
+  // }
 }
