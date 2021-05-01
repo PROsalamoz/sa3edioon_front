@@ -34,6 +34,7 @@ import { UpdateProductComponent } from './components/products/update-product/upd
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 import { SearchForProductComponent } from './components/search-for-product/search-for-product.component';
 import { FooterComponent } from './components/site-layout/footer/footer.component';
+import { HideAndDispalyService } from './services/hide-and-dispaly.service';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,7 @@ import { FooterComponent } from './components/site-layout/footer/footer.componen
     ReactiveFormsModule,
     // AngularFontAwesomeModule
   ],
-  providers: [],
+  providers: [HideAndDispalyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiProductService } from 'src/app/services/api-product.service';
+import { HideAndDispalyService } from 'src/app/services/hide-and-dispaly.service';
 
 @Component({
   selector: 'app-add-product',
@@ -8,9 +9,10 @@ import { ApiProductService } from 'src/app/services/api-product.service';
 })
 export class AddProductComponent implements OnInit {
 
-  constructor(private productService: ApiProductService) { }
+  constructor(private productService: ApiProductService,public carsoule: HideAndDispalyService) { }
 
   ngOnInit(): void {
+    this.carsoule.hide();
   }
   addNewProduct(form){
     console.log(form.value);
