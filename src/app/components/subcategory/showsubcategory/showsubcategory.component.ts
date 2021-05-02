@@ -5,6 +5,7 @@ import {logger} from 'codelyzer/util/logger';
 import {SubCategories} from '../../classes/sub-categories';
 import {CategoryService} from '../../../services/category.service';
 import {Category} from '../../../interfaces/category';
+import { TestiHideService } from 'src/app/services/testi-hide.service';
 
 @Component({
   selector: 'app-showsubcategory',
@@ -19,7 +20,7 @@ export class ShowsubcategoryComponent implements OnInit {
   catId: number;
 
   // tslint:disable-next-line:variable-name
-  constructor(private Ser: SubcategoryService,  private _activedRoute: ActivatedRoute) {
+  constructor(private Ser: SubcategoryService,  private _activedRoute: ActivatedRoute, public testi:TestiHideService) {
     this.catId = this._activedRoute.snapshot.params.id;
   }
 
@@ -27,6 +28,7 @@ export class ShowsubcategoryComponent implements OnInit {
   ActivateAddEditSubCatComp = false;
   subcat: any;
   ngOnInit(): void {
+    this.testi.hide();
     this.refreshSubCatList2();
     this.refreshSubCatList();
   }

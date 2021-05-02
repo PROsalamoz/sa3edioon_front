@@ -3,7 +3,7 @@
   <div class="category_section_2">
     <!-- <div *ngFor="let shop of shops"> -->
     <div class="row">
-       <div class="col-lg-6 col-sm-12" *ngFor="let shop of shops" [routerLink]="['/sub_category', shop.category]">
+       <div class="col-lg-4 col-sm-6" *ngFor="let shop of shops" [routerLink]="['/sub_category', shop.category]">
           <div class="beds_section">
              <div><img src="{{shop.img}}"></div>
              <h1 class="bed_text">{{shop.name}}</h1>
@@ -22,7 +22,7 @@
     <div class="category_section_2">
       <!-- <div > -->
       <div class="row">
-         <div class="col-lg-6 col-sm-6" *ngFor="let shop of filterShops" [routerLink]="['/ApiProducts', shop.category]">
+         <div class="col-lg-4 col-sm-6" *ngFor="let shop of filterShops" [routerLink]="['/ApiProducts', shop.category]">
             <div class="beds_section">
 
                <div><img src="{{shop.img}}"></div>

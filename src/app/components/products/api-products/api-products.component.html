@@ -1,20 +1,30 @@
-
-  <div class="demo">
-    <div class="container">
+<!-- <div class="demo">
+    <div class="container-fluid"> -->
         <div class="row text-center">
-          <app-search-for-product class="mt-2" style="margin-left: 10%"></app-search-for-product>
-          <button style="margin-left: 50%;margin-top: 10px" class="btn btn-primary btn-sm" [routerLink]="['/add-product']">Add Product</button>
-        </div>
-<br>
+         <app-search-for-product class="mt-5" style="margin-left: 30%"></app-search-for-product>
+          
+         </div>
+
+<div class="container-fluid">
+    <button style="margin-top: 5%;" type="button" class="btn btn-outline-secondary float-left" data-target="#exampleModal" [routerLink]="['/add-product']" >
+      + Product
+    </button>
+
+    <div class="wrapper">
+        <div class="container">
         <div class="row">
-            <div class="col-md-3 col-sm-6" *ngFor="let item of filetrpProducts()">
+            <!-- <button style="margin-top: 10px" class="btn btn-primary btn-sm" [routerLink]="['/add-product']">Add Product</button> -->
+          
+            <div class="col-md-3 col-sm-6" *ngFor="let item of filetrpProducts()" style="margin-top: 6%;">
                 <div class="product-grid" >
                     <div class="product-image">
                         <a class="image" [routerLink]="['/ApiProduct',item.id]">
                             <img class="pic-1" src="{{item.img}}" >
                             <!-- <a class="btn btn-warning" [routerLink]="['/ApiProduct',item.id]" style="color: white;"><b>Show</b></a> -->
                          </a>
+                         
                     </div>
+                    
                     <div class="product-content">
                         <ul>
                             <li class="fa fa-star" [class.rate]="isRated" (click)="changeRating()"></li>
@@ -26,10 +36,13 @@
                         </ul>
                         
                         <h3 class="title"><a [routerLink]="['/ApiProduct',item.id]">{{item.Title}}</a></h3>
-                        <div class="price"><span>{{item.price}}</span>{{ item.price}} EGP</div>
+                        <div class="price"><span></span>{{item.price}} EGP</div>
                         <a (click)="addToCart(item)" class="add-to-cart" data-toggle="modal" data-target="#product_view"><i class="fa fa-shopping-cart"></i>add to cart</a>
                     </div>
                 </div>
                 <br>
             </div>
             </div>
+            </div>
+    </div>
+    </div>

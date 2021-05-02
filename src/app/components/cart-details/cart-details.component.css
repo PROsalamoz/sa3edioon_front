@@ -60,7 +60,7 @@
     font-size: 14px;
     text-align: center;
     color: #ffffff;
-    background: #FF6F61;
+    background: #905f989c;
     border: none;
     border-radius: 4px;
 }
@@ -108,7 +108,7 @@
 }
 
 .cart-page .coupon input:focus {
-    border-color: #FF6F61;
+    border-color: #905f989c;
 }
 
 .cart-page .coupon button {
@@ -117,15 +117,15 @@
     padding: 2px 0;
     font-size: 16px;
     text-align: center;
-    color: #FF6F61;
+    color: #905f989c;
     background: #ffffff;
-    border: 1px solid #FF6F61;
+    border: 1px solid #905f989c;
     border-radius: 4px;
 }
 
 .cart-page .coupon button:hover {
     color: #ffffff;
-    background: #FF6F61;
+    background: #905f989c;
 }
 
 .cart-page .cart-summary {
@@ -163,24 +163,24 @@
     padding: 2px 10px;
     text-align: center;
     color: #ffffff;
-    background: #FF6F61;
+    background: #905f989c;
     border: none;
     border-radius: 4px;
 }
 
 .cart-page .cart-summary .cart-btn button:hover {
-    color: #FF6F61;
+    color: #905f989c;
     background: #000000;
 }
 
 .cart-page .cart-summary .cart-btn button:first-child {
     margin-right: 25px;
-    color: #FF6F61;
+    color: #905f989c;
     background: #ffffff;
-    border: 1px solid #FF6F61;
+    border: 1px solid #905f989c;
 }
 
 .cart-page .cart-summary .cart-btn button:first-child:hover {
     color: #ffffff;
-    background: #FF6F61;
+    background: #905f989c;
 }

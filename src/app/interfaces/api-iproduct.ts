@@ -3,7 +3,7 @@ export interface ApiIproduct {
   Title: string;
   price: number;
   description: string;
-  Discount: number;
+  discount: number;
   slug: string;
   img: string;
   stock: number;

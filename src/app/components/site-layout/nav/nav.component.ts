@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HideHowComponentsService } from 'src/app/services/hide-how-components.service';
+import { HideNavbarService } from 'src/app/services/hide-navbar.service';
 
 @Component({
   selector: 'app-nav',
@@ -8,7 +9,7 @@ import { HideHowComponentsService } from 'src/app/services/hide-how-components.s
 })
 export class NavComponent implements OnInit {
  
-  constructor(public slider:HideHowComponentsService) { }
+  constructor(public slider:HideHowComponentsService, public nav:HideNavbarService) { }
 
   ngOnInit(): void {
   }
