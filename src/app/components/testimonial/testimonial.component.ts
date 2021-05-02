@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestiHideService } from 'src/app/services/testi-hide.service';
 
 @Component({
   selector: 'app-testimonial',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestimonialComponent implements OnInit {
 
-  constructor() { }
+  constructor(public test: TestiHideService) { }
 
   ngOnInit(): void {
   }

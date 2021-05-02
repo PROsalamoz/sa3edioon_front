@@ -18,11 +18,13 @@ FilteresProducts: ApiIproduct[];
 SubCategorySelected: SubCategories;
 ProductList=[];
 subCatId: number;
-
+isRated=true;
+changeRating(){
+  this.isRated=!this.isRated;
+}
   constructor(private _apiPrdServ:ApiProductService, private cartService: CartServiceService,
               private _activedRoute:ActivatedRoute) {
   }
-  currentRate:number=3;
   ngOnInit(): void {
     this.subCatId=this._activedRoute.snapshot.params["subCatId"];
     // get all product
