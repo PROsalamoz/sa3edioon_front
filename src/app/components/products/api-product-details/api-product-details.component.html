@@ -1,70 +1,77 @@
-	<!--Main layout-->
-		 <!-- <main class="mt-5 pt-4"> -->
-			<div class="container">
+<!--Main layout-->
+<!-- <main class="mt-5 pt-4"> -->
+<div class="container">
 
-			  <!--Grid row-->
-			  <div class="row ">
+	<!--Grid row-->
+	<div class="row " style="margin-top: 10%;">
 
-				<!--Grid column-->
-				<div class="col-md-6 mb-4">
+		<!--Grid column-->
+		<div class="col-md-6 mb-4">
 
-				  <img src="{{productDetails.img}}" class="" alt="">
+			<img src="{{productDetails.img}}" class="shadow p-3 mb-5 bg-white rounded" alt="">
 
+		</div>
+		<!--Grid column-->
+
+		<!--Grid column-->
+		<div class="col-md-6 mb-4">
+
+			<!--Content-->
+			<div class="p-4">
+				<h1>{{productDetails.Title}}</h1>
+				<div><a [routerLink]="['/update-product/',productDetails.id]">Update Product</a> | <a
+						[routerLink]="['/delete-product/',productDetails.id]">Delete Product</a></div>
+
+
+				<div class="mb-3">
+					<a href="">
+						<span style="  width: 18%; font-size: 14px;" class="badge badge-pill badge-primary ">Category
+							2</span>
+					</a>
+					<a href="">
+						<span style="  width: 18%; font-size: 14px;" class="badge badge-pill badge-danger ">New</span>
+					</a>
+					<a href="">
+						<span style="  width: 18%; font-size: 14px;"
+							class="badge badge-pill badge-warning ">Bestseller</span>
+					</a>
 				</div>
-				<!--Grid column-->
 
-				<!--Grid column-->
-				<div class="col-md-6 mb-4">
-
-				  <!--Content-->
-				  <div class="p-4">
-					  <h1>{{productDetails.Title}}</h1>
-					  <div><a [routerLink]="['/add-product']">Add Product</a> |<a [routerLink]="['/update-product/',productDetails.id]">Update Product</a> | <a [routerLink]="['/delete-product/',productDetails.id]">Delete Product</a></div>
-
-
-					<div class="mb-3">
-					  <a href="">
-						<span style="  width: 18%; font-size: 14px;" class="badge badge-pill badge-primary ">Category 2</span>
-					  </a>
-					  <a href="">
-						<span style="  width: 18%; font-size: 14px;"  class="badge badge-pill badge-danger ">New</span>
-					  </a>
-					  <a href="">
-						<span style="  width: 18%; font-size: 14px;"  class="badge badge-pill badge-warning ">Bestseller</span>
-					  </a>
-					</div>
-
-					<p class="lead">
-					  <span class="mr-1">
+				<p class="lead">
+					<!-- <span class="mr-1">
 						<del>200EGP</del>
-					  </span>
-					  <span>{{productDetails.price}} EGP</span>
-					</p>
+					  </span> -->
+					<span>{{productDetails.price}} EGP</span>
+				</p>
 
-					<p class="lead font-weight-bold">Description</p>
+				<p class="lead font-weight-bold">Description</p>
 
-					<p style="margin: 0%;margin-bottom: 5%;">{{productDetails.description}}</p>
-            <p>{{productDetails.subCat}}</p>
+				<p style="margin: 0%;margin-bottom: 5%;">{{productDetails.description}}</p>
+				<p>{{productDetails.subCat}}</p>
 
-					<form class="d-flex justify-content-left">
-					  <button (click)="addToCart()" class="add-to-cart btn btn-primary" type="button" style="margin-right: 10%;margin-left: 2%;">Add to cart<span class="fa fa-shopping-cart" style="padding: 0.2em 0.5em;"></span></button>
-            <button class="btn btn-primary" (click)="back()">Go Back</button>
-            <span class="bg-dark text-white">{{productDetails.subCat}}</span>
+				<form class="d-flex justify-content-left">
+					<button (click)="addToCart()" class="col btn btn-ultra-voilet btn-rounded" type="button"
+						style="margin-right: 10%;margin-left: 2%;">Add to cart<span class="fa fa-shopping-cart"
+							style="padding: 0.2em 0.5em;"></span></button>
+					<button class="col btn btn-ultra-voilet btn-rounded" (click)="back()"><b>Back</b></button>
+					<br>
+					<!-- <button class="col btn btn-ultra-voilet btn-rounded">Ultra Voilet</button> -->
+					<span class="bg-dark text-white">{{productDetails.subCat}}</span>
 
-            <br>
-						<!-- <i class="fas fa-shopping-cart ml-1"></i>
+					<br>
+					<!-- <i class="fas fa-shopping-cart ml-1"></i>
 </button> -->
 
 
-					</form>
+				</form>
 
-				  </div>
-				  <!--Content-->
+			</div>
+			<!--Content-->
 
-				</div>
-				<!--Grid column-->
+		</div>
+		<!--Grid column-->
 
-			  </div>
-			  <!--Grid row-->
-			  </div>
-			  <!-- </main> -->
+	</div>
+	<!--Grid row-->
+</div>
+<!-- </main> -->
