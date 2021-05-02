@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HideHowComponentsService } from 'src/app/services/hide-how-components.service';
+import { TestiHideService } from 'src/app/services/testi-hide.service';
 import { CartItem } from '../../interfaces/cart-item';
 import {CartServiceService} from '../../services/cart-service.service';
 
@@ -13,9 +15,12 @@ export class CartDetailsComponent implements OnInit {
   totalPrice = 0;
   totalQuantity = 0;
 
-  constructor(private cartService: CartServiceService) { }
+  constructor(private cartService: CartServiceService, public slider:HideHowComponentsService,
+    public test: TestiHideService) { }
 
   ngOnInit(): void {
+    this.test.hide();
+    this.slider.hide();
     this.listCartDetails();
   }
 
